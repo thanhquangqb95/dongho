@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DongHo.Models.SanPhamNu>
+
+@{
+    ViewBag.Title = "SanPhamNu";
+    Layout = "~/Views/Shared/_LayoutDanhMuc.cshtml";
+   
+}
+<div class="ChiTietSanPham">
+
+    <h2>SanPhamNu</h2>
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-sm-6 col-xs-12  ">
+            <div class="thumbnail">
+                <img src="@item.ImageCover" alt="" />
+                <span>@Html.DisplayFor(modelItem => item.Title)</span>
+                <p>
+                    <button href="/Book/EditBook/@item.Id">Edit Book</button>
+                    <button href="/Book/DeleteBook/@item.Id">Delete Book</button>
+                </p>
+            </div>
+        </div>
+    }
+
+</div>
