@@ -1,0 +1,48 @@
+﻿
+@using DongHo.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DONGHO>
+@{
+    ViewBag.Title = "QLSANPHAM";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<p>@Html.ActionLink("Thêm Sản Phẩm Mới","Create")</p>
+<table class="table">
+    <tr>
+        <th>
+            Hình Ảnh Sản Phẩm
+        </th>
+        <th>Tên Sản Phẩm</th>
+        <th>Giá Sản Phẩm</th>
+        <th>Số Lượng Còn</th>
+        <th>Mã Nhà Cung cấp Sản Phẩm</th>
+        <th>Lựa CHọn</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th><img class="hinhsanpham"src="~/DONGHO/@item.hinh" /></th>
+            <th>@item.TenDongHo</th>
+            <th>@item.DonGia</th>
+            <th>@item.SoLuong</th>
+            <th>@item.MaNCC</th>
+            <th>
+                <div id="DatMua">
+                    @Html.ActionLink("Sửa", "SuaSanPham", new { id = item.MaDongHo })
+                </div>
+                <br />
+                <br />
+                <br />
+                <div id="DatMua">
+                    @Html.ActionLink("Xoa", "Xoa", new { id = item.MaDongHo })
+                </div>
+            </th>
+        </tr>   
+    }
+</table>
+Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model,page=>Url.Action("QLSANPHAM",new { page = page}))
+</div>
+
+

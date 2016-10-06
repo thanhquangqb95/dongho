@@ -1,0 +1,146 @@
+D:\DoAnWeb\DongHo\DongHo\bin\ApplicationInsights.config
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\csc.exe
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\System.Collections.Immutable.dll
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\System.Reflection.Metadata.dll
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\vbc.exe
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\VBCSCompiler.exe
+D:\DoAnWeb\DongHo\DongHo\bin\roslyn\VBCSCompiler.exe.config
+D:\DoAnWeb\DongHo\DongHo\bin\DongHo.dll.config
+D:\DoAnWeb\DongHo\DongHo\bin\DongHo.dll
+D:\DoAnWeb\DongHo\DongHo\bin\DongHo.pdb
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.Agent.Intercept.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.DependencyCollector.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.Web.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.WindowsServer.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.ApplicationInsights.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.Web.Infrastructure.dll
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Helpers.dll
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Mvc.dll
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Razor.dll
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Webpages.Deployment.dll
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Webpages.dll
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Webpages.Razor.dll
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.DependencyCollector.xml
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.Web.xml
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.AI.WindowsServer.xml
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.ApplicationInsights.xml
+D:\DoAnWeb\DongHo\DongHo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Razor.xml
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Webpages.xml
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Webpages.Deployment.xml
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Webpages.Razor.xml
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Helpers.xml
+D:\DoAnWeb\DongHo\DongHo\bin\System.Web.Mvc.xml
+D:\DoAnWeb\DongHo\DongHo\obj\Debug\DongHo.csprojResolveAssemblyReference.cache
+D:\DoAnWeb\DongHo\DongHo\obj\Debug\DongHo.dll
+D:\DoAnWeb\DongHo\DongHo\obj\Debug\DongHo.pdb
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\ApplicationInsights.config
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\csc.exe
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\vbc.exe
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\VBCSCompiler.exe
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\DongHo.dll.config
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\DongHo.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\DongHo.pdb
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.Web.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.ApplicationInsights.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Helpers.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Mvc.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Razor.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Webpages.Deployment.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Webpages.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Webpages.Razor.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.Web.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.ApplicationInsights.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Razor.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Webpages.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Webpages.Deployment.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Webpages.Razor.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Helpers.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\System.Web.Mvc.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\obj\Debug\DongHo.csprojResolveAssemblyReference.cache
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\obj\Debug\DongHo.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\obj\Debug\DongHo.pdb
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\PagedList.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\PagedList.Mvc.dll
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\PagedList.xml
+C:\Users\NvThanh\Desktop\New folder (3)\dongho-master\DongHo\DongHo\bin\PagedList.Mvc.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\ApplicationInsights.config
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\csc.exe
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\System.Collections.Immutable.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\System.Reflection.Metadata.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\vbc.exe
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\VBCSCompiler.exe
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\roslyn\VBCSCompiler.exe.config
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\DongHo.dll.config
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\DongHo.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\DongHo.pdb
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.Agent.Intercept.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.DependencyCollector.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.Web.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.WindowsServer.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.ApplicationInsights.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.Web.Infrastructure.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\PagedList.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\PagedList.Mvc.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Helpers.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Mvc.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Razor.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Webpages.Deployment.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Webpages.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Webpages.Razor.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.DependencyCollector.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.Web.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.AI.WindowsServer.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.ApplicationInsights.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\PagedList.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\PagedList.Mvc.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Razor.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Webpages.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Webpages.Deployment.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Webpages.Razor.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Helpers.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\bin\System.Web.Mvc.xml
+D:\DoAnWeb\DongHo\DongHo\DongHo\obj\Debug\DongHo.csprojResolveAssemblyReference.cache
+D:\DoAnWeb\DongHo\DongHo\DongHo\obj\Debug\DongHo.dll
+D:\DoAnWeb\DongHo\DongHo\DongHo\obj\Debug\DongHo.pdb

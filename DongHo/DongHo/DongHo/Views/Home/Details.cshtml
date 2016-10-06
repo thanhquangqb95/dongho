@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutDanhMuc.cshtml";
+}
+<br /><br />
+<div class="col-md-12 col-sm-12 text-center">
+    <span class="title-medium deep-pink-dark-text text-uppercase alt-font title-dividers font-weight-600 position-relative">Chi Tiết Sản Phẩm</span>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div style="width:80%; float:right;border-left:dotted 1px;border-color:azure">
+                <img src="~/DONGHO/@Model.hinh" width="100%" />
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div style="width:40%;float:left;padding:10px">
+                <h4 style="font-weight:bold;color:red">
+                    TEN SAN PHAM: @Model.TenDongHo
+                </h4>
+                <h5>Giác: @Model.DonGia</h5>
+                <h5>Số Lượng: @Model.SoLuong</h5>
+                <h5>Tên Hình: @Model.hinh</h5>
+
+            </div>
+            <div>
+                <div id="DatMua">
+                    <a href="@Url.Action("ThemGiohang", "GioHang",new {@iMasach = @Model.MaDongHo ,@strURL= Request.Url.ToString()})" class="list-group-item">DAT MUA</a>
+                </div>
+                <br />
+
+            </div>
+        </div>
+    </div>
+</div>
+

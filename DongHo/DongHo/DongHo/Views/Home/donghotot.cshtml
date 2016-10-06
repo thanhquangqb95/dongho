@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "donghotot";
+    //Layout = "~/Views/Home/Index.cshtml";
+}
+<div class="row-fluid hinh" style="text-align: center;">
+    @foreach (var dongho in Model)
+            {
+        <div class="col-sm-3 col-lg-3 col-md-3">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details","Home",new {id = dongho.MaDongHo})">
+                    <img src="~/DongHoNam/@dongho.hinh" />
+                    <br />
+                    @dongho.DonGia
+                    <br />
+                    @dongho.TenDongHo
+                </a>
+
+            </div>
+        </div>
+    }
+</div>
+
+
+

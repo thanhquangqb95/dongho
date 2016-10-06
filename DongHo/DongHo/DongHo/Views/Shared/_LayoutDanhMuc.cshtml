@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*CSS*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+
+    @*icon*@
+    <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    @*font*@
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+</head>
+<body>
+    <div class="web">
+        <div class="topbar-wrapp">
+            <div class="container">
+                <div class="top-bar-left">
+                    <i class="fa fa-phone" style="color:white;" aria-hidden="true"></i> OUR PHONE NUMBER: <span style="margin-left:10px; border-bottom: 1px solid rgba(255,255,255,0.3);">01634220199</span>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li class="menu-top"><a href=""><i class="fa fa-user "></i> My Account</a></li>
+                        <li class="menu-top"><a>Cart</a></li>
+                        <li class="menu-top"><a href="">Our location</a></li>
+                        <li class="menu-top"><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END TOP HEADER-->
+    <header class="top-nav">
+        <div class="container">
+            <div class="menu-nav">
+                <ul class="nav navbar-nav">
+                    <li><a class="text-nav " href="#DongHo">Đồng Hồ</a></li>
+                    <li><a class="text-nav " href="~/Views/Home/SanPhamnu.cshtml">Đồng Hồ Nam</a></li>
+                    <li><a class="text-nav " href="~/Home/SanPhamNu">Đồng Hồ Nữ</a></li>
+                    <li><a class="text-nav " href="#GioiThieu">Giới Thiệu</a></li>
+                    <li><a class="text-nav " href="#LienHe">Liên Hệ</a></li>
+                    <li><a class="text-nav "><input type="text" class="search-query " placeholder="Tìm Kiếm"></a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="~/Home" class="logo"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="NoiDung">
+        <div class="DanhMuc col-md-4">Danh mục sản phẩm</div>
+        <div class="SanPham col-md-8">RenderBody()</div>
+    </div>
+
+    <footer class="footer-bottom">
+        <div class="container">
+
+            <div class="col-md-12 ">
+                <a href="~/Home" class="logo-bottom col-md-12"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+            </div>
+
+            <div class="share-logo">
+                <div class="row ">
+                    <div class="col-md-12 col-xs-12 text-center">
+                        <div class="share-logo-link ">
+                            <!-- social media link -->
+                            <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a>
+                            <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus fa-2x"></i></a>
+                            <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble fa-2x"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube fa-2x"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x"></i></a>
+                            <!-- end social media link -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="col-md-2 ">
+                    <div class="title-footer btn"> Our Store </div>
+                    <div class="textwidget">
+                        <ul class="menu-footer">
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">London SF</a></li>
+                            <li><a href="#">Cockfosters BP</a></li>
+                            <li><a href="#">Los Angeles</a></li>
+                            <li><a href="#">Chicago</a></li>
+                            <li><a href="#">Las Vegas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="title-footer btn">
+                        ĐỒng Hồ Rolex
+                    </div>
+                </div>
+                <div class="col-md-2 btn">
+                    <div class="title-footer">
+                        Bộ Sưu Tập
+                    </div>
+                </div>
+                <div class="col-md-2 btn">
+                    <div class="title-footer">
+                        Dịch Vụ
+                    </div>
+                </div>
+                <div class="col-md-4 btn">
+                    <div class="title-footer">
+                        THế Giới Rolex
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-link">
+            <div class="col-md-12 footer-end">
+                <p>&copy;  Một sản phẩm của Quảng và Thanh.</p>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+    </footer>
+    @*javascripts*@
+    <script src="~/scripts/bootstrap.js"></script>
+
+</body>
+</html>

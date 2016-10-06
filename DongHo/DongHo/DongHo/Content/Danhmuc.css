@@ -1,0 +1,13 @@
+﻿body {
+}
+.ChiTiet{
+    float:left;
+    width:30%;
+    height:100%;
+    background-color:red;
+}
+.ChiTietSanPham{
+    float: right;
+    width:70%;
+
+}

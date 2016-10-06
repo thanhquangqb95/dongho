@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "SanPhamNu";
+    Layout ="~/Views/Shared/_LayoutDanhMuc.cshtml";
+}
+<br /><br />
+<div class="col-md-12 col-sm-12 text-center">
+    <span class="title-medium deep-pink-dark-text text-uppercase alt-font title-dividers font-weight-600 position-relative">Đồng Hồ Nữ</span>
+</div>
+<div class="container" href="#SanPhamMoi">
+    <div class="row-fluid hinh" style="text-align: center;">
+        @foreach (var dongho in Model)
+            {
+            <div class="col-sm-3 col-lg-3 col-md-3">
+                <div class="thumbnail">
+                    <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
+                        <img src="~/DongHoNu/@dongho.hinh" />
+                        <br />
+                        @dongho.DonGia
+                        <br />
+                        @dongho.TenDongHo
+                    </a>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

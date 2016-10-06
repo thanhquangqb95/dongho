@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*CSS*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+
+    @*icon*@
+    <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    @*font*@
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+</head>
+<body id="home">
+    <div class="web">
+        @*Top header*@
+        <header>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-2 col-sm-12">
+                        <div class="logo col-md-12">
+                            <a href="~/Home" class="logo"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-10 ">
+                        <div class="header-top">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <ul class="option_nav">
+                                        <li class="dorpdown">
+                                            <i class="fa fa-arrow-down" aria-hidden="true" style="color:red"></i>
+                                            <a href="#">Tiếng Việt </a>
+                                            <ul class="subnav">
+                                                <li><a href="#">English</a></li>
+                                                <li><a href="#">Tiếng Việt</a></li>
+                                              
+                                            </ul>
+                                        </li>
+                                        <li class="dorpdown">
+                                            <i class="fa fa-arrow-down" aria-hidden="true" style="color:red"></i>
+                                            <a href="#">USD</a>
+                                            <ul class="subnav">
+                                                <li><a href="#">USD</a></li>
+                                                <li><a href="#">VND</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="topmenu">
+                                        <li><a href="#">Thông Tin</a></li>
+                                        <li><a href="#">Tin tức</a></li>                                      
+                                        <li><a href="#">Hỗ Trợ</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">                                    
+                                        <ul class="usermenu">
+                                            <li ><a href=""><i class="fa fa-user " aria-hidden="true"> My Account</i></a></li>
+                                            <li ><a href=""><i class="fa fa-shopping-cart " aria-hidden="true"> Cart</i></a></li>                                
+                                        </ul>                                   
+                                </div>
+                            </div>
+                        </div>                                             
+                        <div class="menu-nav">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="nav navbar-nav">
+                                        <li class="col-md-2"><a  href="#DongHo">Đồng Hồ Mới</a></li>
+                                        <li class="col-md-2"><a  href="~/Views/Home/SanPhamnu.cshtml">Đồng Hồ Nam</a></li>
+                                        <li class="col-md-2"><a  href="~/Home/SanPhamNu">Đồng Hồ Nữ</a></li>
+                                        <li class="col-md-2"><a  href="#GioiThieu">Đồng Hồ Hot</a></li>
+                                        <li class="col-md-2"><a href="#LienHe">Tin Tức</a></li class="col-md-2">
+                                        <li class="col-md-2"><a><input type="text" class="search-query " placeholder="Tìm Kiếm" style="width:164px"></a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <div class="clearfix"></div>
+        <div class="NoiDung">
+            @RenderBody()
+        </div>
+
+        <footer class="footer-bottom">
+            <div class="container">
+
+                <div class="col-md-12 ">
+                    <a href="~/Home" class="logo-bottom col-md-12"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+                </div>
+
+                <div class="share-logo">
+                    <div class="row ">
+                        <div class="col-md-12 col-xs-12 text-center">
+                            <div class="share-logo-link ">
+                                <!-- social media link -->
+                                <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x" style="color:blue"></i></a>
+                                <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-2x" style="color:blue"></i></a>
+                                <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus fa-2x" style="color:red"></i></a>
+                                <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble fa-2x" style="color:red"></i></a>
+                                <a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube fa-2x" style="color:red"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x" style="color:red"></i></a>
+                                <!-- end social media link -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="col-md-2 ">
+                        <div class="title-footer btn"> Our Store </div>
+                        <div class="textwidget">
+                            <ul class="menu-footer">
+                                <li><a href="#">New York</a></li>
+                                <li><a href="#">London SF</a></li>
+                                <li><a href="#">Cockfosters BP</a></li>
+                                <li><a href="#">Los Angeles</a></li>
+                                <li><a href="#">Chicago</a></li>
+                                <li><a href="#">Las Vegas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="title-footer btn">
+                            ĐỒng Hồ Rolex
+                        </div>
+                    </div>
+                    <div class="col-md-2 btn">
+                        <div class="title-footer">
+                            Bộ Sưu Tập
+                        </div>
+                    </div>
+                    <div class="col-md-2 btn">
+                        <div class="title-footer">
+                            Dịch Vụ
+                        </div>
+                    </div>
+                    <div class="col-md-4 btn">
+                        <div class="title-footer">
+                            THế Giới Rolex
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-link">
+
+                <div class="col-md-12 footer-end">
+                    <hr class="hr-footer" width="80%" align="center" />
+                    <p>&copy;2016  Một sản phẩm của Quảng và Thanh.<a href="http://facebook.com/lethanhquangqb1995" target="_blank">T&Q</a></p>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @*javascripts*@
+    <script src="~/scripts/bootstrap.js"></script>
+    <script src="~/scripts/jquery-3.1.1.js"></script>
+
+</body>
+</html>
