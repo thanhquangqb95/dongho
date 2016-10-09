@@ -1,0 +1,63 @@
+﻿@model DongHo.Models.DONGHO
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+
+<h2>Create</h2>
+    @using (Html.BeginForm("Create","QuanLy",FormMethod.Post,new {@enctype = "multipart/form-data"}))
+    {
+        @Html.AntiForgeryToken();
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.LabelFor(model => model.TenDongHo,new {@class ="control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model=>model.TenDongHo)
+                    @Html.ValidationMessageFor(model => model.TenDongHo)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.DonGia, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DonGia)
+                    @Html.ValidationMessageFor(model => model.DonGia)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SoLuong, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SoLuong)
+                    @Html.ValidationMessageFor(model => model.SoLuong)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaNCC, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("MaNCC")
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaLoai, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("MaLoai")
+                </div>
+            </div>
+            
+            <div class="form-group">
+                @Html.LabelFor(model => model.hinh, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input type="file" name="fileupload" />
+                    @ViewBag.Thongbao
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="THÊM MỚI" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Quang.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Danhmuc.css" rel="stylesheet" type="text/css" />
+    <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+    <link href="~/Content/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <br /><br />
+    <div class="col-md-12 col-sm-12 text-center">
+        <span class="title-medium deep-pink-dark-text text-uppercase alt-font title-dividers font-weight-600 position-relative">Quản Lý</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <p class="lead">MỤC QUẢN LÝ</p>
+                <div class="list-group">
+                    <a href="~/QuanLy/QLSANPHAM" class="list-group-item">Quản Lý Sản Phẩm</a>
+                    <a href="#" class="list-group-item">Quản Lý Tài Khoản</a>
+                    <a href="#" class="list-group-item">Quản Lý Đơn Đặt Hàng</a>
+                </div>
+                <img src="~/QuangCao/quangcao (Copy).jpg" />
+                <link rel="alternate" type="application/rss+xml" title="Tek | Web developers' zone | RSS" href="http://vnexpress.net/rss/tin-moi-nhat.rss" />
+            </div>
+            <div class="col-md-10">
+                <div id="Danhmuc">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-mauchon navbar-fixed-top ">
+        <div class="container">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <div class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav ">
+                <li><a class="menu " href="#DongHo">Đồng Hồ</a></li>
+                <li><a class="menu " href="~/Home/SanPhamNam">Đồng Hồ Nam</a></li>
+                <li><a class="menu " href="~/Home/SanPhamNu">Đồng Hồ Nữ</a></li>
+                <li class="logo-bg "><a href="~/Home" class="logo"><img alt="" src="~/image/logo/rolex-logo.svg"></a></li>
+                <li><a class="menu " href="#GioiThieu">Giới Thiệu</a></li>
+                <li><a class="menu " href="#LienHe">Liên Hệ</a></li>
+                <li><a class="menu " href="~/Home/QuanLy">Quản Lý</a></li>
+                <li><a class="menu "><input type="text" class="search-query " placeholder="Tìm Kiếm"></a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+
+    @*<div class="container body-content">
+            <div class="ChiTiet">dep trai</div>
+            <div></div>
+
+        </div>*@
+    <!-- footer -->
+    <footer class="padding-top footer-color">
+        <div class="container">
+            <div class="row border-bottom padding-eight no-padding-lr">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="footer-social position-relative top4">
+                        <!-- social media link -->
+                        <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus"></i></a>
+                        <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                        <!-- end social media link -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <span class="text-small text-uppercase letter-spacing-1 alt-font">&copy; Một sản phẩm của Quảng và Thanh 2016</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- scroll to top -->
+    <a href="javascript:;" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+    <!-- end scroll to top -->
+    <!-- javascript libraries -->
+
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/modernizr.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="~/Scripts/skrollr.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/smooth-scroll.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.appear.js"></script>
+
+</body>
+</html>
+

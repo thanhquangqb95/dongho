@@ -56,7 +56,38 @@
         </div>
     </div>
 </div>
-    
+ <div class="show">
+    <div class="container">
+
+        <div class="text-link">
+            <a>@Html.ActionLink("Đồng Hồ Mới", "donghonew")</a>
+        </div>
+
+        <div class="row" style="text-align:center">
+            @foreach (var dongho in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="img-show">
+
+                        <div class="thumbnail">
+                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
+                                <img src=" ~/DongHoNam/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
+                                <p>@dongho.TenDongHo</p>
+                            </a>
+                            <p>Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
+                            <button type="button" class="btn btn-default">@Html.ActionLink("Xem Hàng", "Details", new { id = dongho.MaDongHo })</button>
+                            <button type="button" class="btn btn-default" href="~/GioHang/DatHang.cshtml">Mua Hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>
+   
        
 
     @*Slider moi*@

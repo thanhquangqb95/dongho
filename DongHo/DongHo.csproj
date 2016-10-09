@@ -322,8 +322,14 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="scripts\custom.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <None Include="scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="scripts\jquery-3.1.1.js" />
     <Content Include="scripts\jquery-3.1.1.min.js" />
+    <Content Include="scripts\jquery-3.1.1.slim.js" />
+    <Content Include="scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="scripts\jquery.backstretch.js" />
     <Content Include="scripts\jquery.backstretch.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
@@ -339,6 +345,9 @@
     <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DONGHO.cs">
+      <DependentUpon>DONGHO.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\DONGHO.designer.cs">
       <AutoGen>True</AutoGen>
@@ -385,6 +394,7 @@
     <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="scripts\jquery-3.1.1.min.map" />
+    <Content Include="scripts\jquery-3.1.1.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

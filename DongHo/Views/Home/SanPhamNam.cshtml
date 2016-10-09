@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "SanPhamNam";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@*link dẫn*@
+<div class="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                 <a class="fa fa-home"> @Html.ActionLink(" Trang Chủ", "Index") </a>
+            </li>
+            <li>
+                <a>@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</a> 
+            </li>
+        </ul>
+    </div>    
+</div>
+
+@*kShow sản phẩm nam*@
+<div class="show">
+    <div class="container">
+
+        <div class="text-link">
+            <a>@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</a>
+         </div>
+
+        <div class="row" style="text-align:center">
+            @foreach (var dongho in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="img-show">
+       
+                        <div class="thumbnail">
+                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})" >
+                                <img src=" ~/DongHoNam/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%"/>
+                                <p>@dongho.TenDongHo</p>
+                            </a>
+                                <p>Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>                            
+                                <button type="button" class="btn btn-default">@Html.ActionLink("Xem Hàng","Details",new { id = dongho.MaDongHo })</button>   
+                                <button type="button" class="btn btn-default" href="~/GioHang/DatHang.cshtml">Mua Hàng</button>                         
+                        </div>  
+                        
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<div class="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a class="fa fa-home"> @Html.ActionLink(" Trang Chủ", "Index") </a>
+            </li>
+            <li>
+                <a>@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</a>
+            </li>
+            <li>
+                <a>@Model.TenDongHo</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="show">
+    <div class="container">
+
+        <div class="text-link">
+            <a>@Model.TenDongHo</a>
+        </div>
+        <div class="col-md-6">
+            <img src="~/DONGHO/@Model.hinh" alt="@Model.TenDongHo" style="width:100%" />
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-weight:bold;color:red">
+                Đồng Hồ: @Model.TenDongHo
+            </h4>
+            <p>MSSP:@Model.MaDongHo</p>
+            <h5>Giá: @Model.DonGia</h5>
+            <h5>Tình Trạng: Còn Hàng</h5>
+        </div>
+    </div>
+</div>
