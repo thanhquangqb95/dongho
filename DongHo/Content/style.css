@@ -6,53 +6,57 @@
     background: #f8f8f8;
     color: #434343;
 }
-.container{
-    width:95%;
+
+.container {
+    width: 95%;
 }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-#home {    
+#home {
     background-attachment: fixed;
-    position:relative;    
+    position: relative;
 }
 
-#home header { 
-     background-image:url("../image/baner/bg1.png"); 
-     background-attachment: fixed;
+    #home header {
+        /*background-image:url("../image/baner/bg1.png");*/
+        background-attachment: fixed;
+        position: fixed;
+        z-index: 100;
+        display: block;
+        width: 100%;
+        top: 0px;
+    }
+
+header {
     position: fixed;
-    z-index:100;
-    display:block;
-    width:100%;
-    top:0px;
- 
 }
-header{
-    position:fixed;
-}
-header .container{
-    background:#c1b9eb;
-}
-header .row{
-    background-color:#c1b9eb;
-}
+
+    header .container {
+        background-color: white;
+    }
+
+    header .row {
+        background-color: white;
+    }
 
 .logo {
     padding-top: 10px;
-
 }
 
     .logo > img {
-        width:100%;
+        width: 100%;
         position: relative;
-        padding-bottom:10px;
+        padding-bottom: 10px;
     }
 
 .header-top {
     float: right;
     width: 100%;
     position: relative;
+    color: #a37e2c;
 }
 /*option_nav*/
 .option_nav {
@@ -67,7 +71,7 @@ header .row{
         list-style: none;
         margin-right: 20px;
         position: relative;
-        font-weight:bold;
+        font-weight: bold;
     }
 
         .option_nav li > a {
@@ -123,13 +127,12 @@ header .row{
 
     .topmenu li {
         float: left;
-        border-left: 1px solid #4f73d9;
+        border-left: 1px solid #a37e2c;
         padding: 0 8px;
-       
         list-style: none;
         font-weight: bold;
         font-family: "SegoeUI";
-            line-height: 41px;	
+        line-height: 41px;
     }
 
         .topmenu li:first-child {
@@ -143,29 +146,31 @@ header .row{
         }
 
         .topmenu li a {
-            font-size: 15px;
+            font-size: 13px;
             text-transform: uppercase;
             display: block;
-            color: #4f73d9;
+            color: #a37e2c;
             line-height: 12px;
         }
 
             .topmenu li a:hover {
-                color: red;
+                color: cadetblue;
             }
 
 .usermenu {
     float: right;
     padding-top: 10px;
 }
-.usermenu ul{
-    padding-left:10px;
-}
+
+    .usermenu ul {
+        padding-left: 10px;
+    }
+
     .usermenu li {
         float: left;
         margin-left: 25px;
         list-style: none;
-        font-weight: bold;	
+        font-weight: bold;
     }
 
         .usermenu li:first-child {
@@ -175,14 +180,15 @@ header .row{
         .usermenu li a {
             font-size: 15px;
             text-transform: uppercase;
-            display:block;
+            display: block;
             float: left;
-             color: #4f73d9;
-             
-
+            padding-right: 5px;
+            color: #006039;
+            ;
         }
-            .usermenu li a:hover{
-                color:red;
+
+            .usermenu li a:hover {
+                color: red;
             }
 
 
@@ -190,27 +196,38 @@ header .row{
 
 .menu-nav {
     color: black !important;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-        padding-left: 0px;
+    padding-left: 0px;
     padding-right: 0px;
     font-weight: bold;
-        font-family: "SegoeUI";
-            line-height: 41px;
+    font-family: "SegoeUI";
+    line-height: 41px;
+   
 }
-   .menu-nav li a a:hover{
-       color:none;
-   }
-    .menu-nav li{
+
+    .menu-nav li a {
+        color: #006039;
+    }
+
+    .menu-nav li {
+         width: 20%;
+        padding: 0px 10px;
+    }
+
+        .menu-nav li a a:hover {
+            color: none;
+        }
+
+    .menu-nav li {
         position: relative;
         display: block;
-     
     }
+
 .navbar-nav > li > a {
-  
-    padding:5px 0px;
+    padding: 5px 0px;
 }
 
 
@@ -316,9 +333,8 @@ footer {
     }
 /*Nội Dung*/
 .NoiDung {
-    margin-top:100px;
+    margin-top: 100px;
     /*padding-bottom:40px;*/
-   
     background-color: white;
 }
 /*Sản Phẩm*/
@@ -331,60 +347,73 @@ footer {
     border: inset;
     border-color: #1daaa3;
 }
-.item img{
-    width:100%;
+
+.item img {
+    width: 100%;
 }
-.QC-1{
-    background-image:url("../image/baner/bg1.png");
+
+.QC-1 {
+    background-image: url("../image/baner/bg1.png");
 }
-.QC-1 img{
-    padding-top:10px;
-    padding-bottom:10px;
-    width:100%;
-}
+
+    .QC-1 img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
 .row {
     width: 100%;
 }
 
 /*BodyREading*/
-.show{
-    background:#f8f8f8;
+.show {
+    background: #f8f8f8;
 }
+
 .breadcrumb {
-    padding: 20px 15px!important;
+    padding: 20px 15px !important;
     margin-bottom: 0px;
     list-style: none;
     background-color: #f5f5f5;
     border-radius: 4px;
 }
-.breadcrumb .container{    
+
+    .breadcrumb .container {
+    }
+
+    .breadcrumb ul {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .breadcrumb a {
+        font-size: 15px !important;
+        color: red;
+    }
+
+.text-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-.breadcrumb ul{
-    margin:0px!important;
-    padding:0px!important;
-}
-.breadcrumb a{
-    font-size:15px!important;
-    color:red;
-}
-.text-link{
-    padding-top:20px;
-    padding-bottom:20px;
-}
-.text-link a{
+
+    .text-link a {
         font-size: 16px;
-    font-weight: 700;
-   font-family: "SegoeUI";
-   letter-spacing:2px;     
+        font-weight: 700;
+        font-family: "SegoeUI";
+        letter-spacing: 2px;
+    }
+
+.img-show {
+    padding-bottom: 20px;
 }
-.img-show{
-    padding-bottom:20px;
-}
-.btn-default a:hover{
+
+.btn-default a:hover {
     text-decoration: none;
-    border:none;
+    border: none;
 }
+
 .Login {
     background-image: url('../image/baner/slide2.jpg');
-    color:white;
+    color: white;
 }
