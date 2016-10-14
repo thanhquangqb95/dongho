@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @*CSS*@
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-    <link href="~/Content/Style.css" rel="stylesheet" />
+
+    <link href="~/Content/boostrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/boostrap/bootstrap-theme.min.css" rel="stylesheet" />  
+    <link href="~/Content/home/style.css" rel="stylesheet" />
 
     @*icon*@
     <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -18,7 +19,7 @@
     <div class="web">
         @*Top header*@
         <header>
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2 col-sm-12">
@@ -62,7 +63,7 @@
                                         <div class="col-md-5">
                                             <ul class="usermenu">
                                                 <li><a  class="fa fa-user"> @Html.ActionLink(" My Account", "KhachHang")</a></li>
-                                                <li><a class="fa fa-shopping-cart"> Cart</a></li>
+                                                <li><a class="fa fa-shopping-cart">@Html.ActionLink(" Cart", "")</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -77,7 +78,7 @@
                                                 <li class="col-md-2">@Html.ActionLink("Đồng Hồ Hot", "donghotot")</li>
                                                 <li class="col-md-2">@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</li>
                                                 <li class="col-md-2">@Html.ActionLink("Đồng Hồ Nữ", "SanPhamNu")</li>
-                                                <li class="col-md-2"><a><input type="text" class="search-query " placeholder="Tìm Kiếm" "></a></li>
+                                                <li class="col-md-2"><a><input type="text" class="search-query " placeholder="Tìm Kiếm"></a></li>
                                             </ul>
                                         </div>
 
@@ -104,20 +105,20 @@
         <footer class="footer-bottom">
             <div class="container">
 
-                <div class="col-md-12 ">
-                    <a href="~/Home" class="logo-bottom col-md-12"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+                <div class="col-md-12 col-sm-12">
+                    <a href="~/Home" class="logo-bottom col-md-12"><img alt="" src="~/image/logo/rolex-logo.svg" ></a>
                 </div>
 
                 <div class="share-logo">
                     <div class="row ">
-                        <div class="col-md-12 col-xs-12 text-center">
+                        <div class="col-md-12 col-sm-12 text-center">
                             <div class="share-logo-link ">
                                 <!-- social media link -->
-                                <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x" style="color:blue"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/rolex/?fref=ts/"><i class="fa fa-facebook fa-2x" style="color:blue"></i></a>
                                 <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-2x" style="color:blue"></i></a>
                                 <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus fa-2x" style="color:red"></i></a>
                                 <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble fa-2x" style="color:red"></i></a>
-                                <a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube fa-2x" style="color:red"></i></a>
+                                <a target="_blank" href="https://www.youtube.com/user/WorldOfRolex"><i class="fa fa-youtube fa-2x" style="color:red"></i></a>
                                 <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x" style="color:red"></i></a>
                                 <!-- end social media link -->
                             </div>
@@ -126,7 +127,7 @@
                 </div>
 
                 <div class="footer-column">
-                    <div class="col-md-2 ">
+                    <div class="col-md-2 col-sm-12">
                         <div class="title-footer btn"> Our Store </div>
                         <div class="textwidget">
                             <ul class="menu-footer">
@@ -140,9 +141,17 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="title-footer btn">
-                            ĐỒng Hồ Rolex
-                        </div>
+                        <div class="title-footer btn">ĐỒng Hồ Rolex</div>
+                        <div class="textwidget">
+                            <ul class="menu-footer">
+                                <li><a href="#">Đồng Hồ Nam</a></li>
+                                <li><a href="#">Đồng Hồ Nữ</a></li>
+                                <li><a href="#">Đồng Hồ Hot</a></li>
+                                <li><a href="#">Đồng Hồ 2016</a></li>
+                                <li><a href="#">Phiên Bản Đặt Biệt</a></li>
+                              
+                            </ul>
+                        </div>  
                     </div>
                     <div class="col-md-2 btn">
                         <div class="title-footer">

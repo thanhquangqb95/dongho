@@ -31,7 +31,7 @@ namespace DongHo.Controllers
         }
         public ActionResult donghonew()
         {
-            var dongho = laydonghomoi(8);
+            var dongho = donghotot(8);
             return View(dongho);
         }
         public ActionResult SanPhamNu()
@@ -126,27 +126,19 @@ namespace DongHo.Controllers
             }
             return View();
         }
-        public ActionResult Seach(string seach)
+        public ActionResult vuivui()
         {
-            ViewBag.NameSortParm = String.IsNullOrEmpty(seach) ? "name" : "";
-            ViewBag.MSSortParm = String.IsNullOrEmpty(seach) ? "MS" : "";
-            var dongho = from s in data.DONGHOs
-                           select s;
-            switch (seach)
-            {
-                case "name":
-                    dongho = dongho.OrderByDescending(s => s.TenDongHo);
-                    break;
-                case "MS":
-                    dongho = dongho.OrderBy(s => s.MaDongHo);
-                    break;
-               
-                default:
-                    dongho = dongho.OrderBy(s => s.MaLoai);
-                    break;
-            }
-            return View(dongho.ToList());
+            return View();
+        }
+        public ActionResult vuivuiu()
+        {
+            return View();
+        }
+        public ActionResult asdasd()
+        {
+            return View();
         }
     }
-   
+
+
 }

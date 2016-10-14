@@ -13,6 +13,9 @@ namespace DongHo.Controllers
     {
         // GET: QuanLy
         DONGHODataContext data = new DONGHODataContext();
+        List<DONGHO> dDongHo = new List<DONGHO>();
+        int madathang;
+        KhachHang khachhang;
         public ActionResult Index()
         {
             return View();
@@ -149,6 +152,63 @@ namespace DongHo.Controllers
             }
             data.DONGHOs.DeleteOnSubmit(dongho);
             data.SubmitChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult DonDatHang()
+        {
+            var groupJoinQuery =
+          from ddh in data.DONDATHANGs where ddh.ThanhToan == false
+          select ddh;
+          return View(groupJoinQuery);
+        }
+        public ActionResult DatHang()
+        {
+            var groupJoinQuery =
+          from ddh in data.DONDATHANGs
+          where ddh.ThanhToan == false
+          select ddh;
+            return View(groupJoinQuery);
+        }
+
+        public ActionResult DetailsDDH(int id)
+        {
+            khachhang = new KhachHang(id);
+            madathang = khachhang.MaDDH1;
+            Session["MaDDH"] = id;
+            return View(khachhang);
+        }
+        public ActionResult DetailsDDongho()
+        {
+            foreach (var item in khachhang.MaDdong)
+            {
+                dDongHo.Add(data.DONGHOs.Single(m => m.MaDongHo == item));
+            }
+            return View(dDongHo);
+        }
+        public ActionResult updateĐH(int id)
+        {
+           
+            if (Session["MaDDH"] != null)
+            {
+                id = int.Parse(Session["MaDDH"].ToString());
+                var ddh =
+                 from dh in data.DONDATHANGs
+                 where dh.MaDDH == id
+                 select dh;
+                foreach (DONDATHANG ord in ddh)
+                {
+                    ord.GiaHang = true;
+                    ord.ThanhToan = true;
+                }
+                try
+                {
+                    data.SubmitChanges();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
             return RedirectToAction("Index");
         }
     }

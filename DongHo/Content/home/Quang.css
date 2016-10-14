@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background: #f2f2f2;
+    color: #000;
+    font-weight: 400;
+    font-style: normal!important;
+    font-size: 14px;
+    font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+    line-height: 1.42857;
+    min-width: 718px;
+    list-style:none;
+   
+}
+#home {
+    background-attachment:initial;
+    position: relative;
+}
+
+    #home header {
+        /*background-image:url("../image/baner/bg1.png");*/
+        background-attachment: initial;
+        position: fixed;
+        z-index: 100;
+        display: block;
+        width: 100%;
+        top: 0px;
+        background-color:white;
+    }
+
+header {
+    position: inherit;
+    
+}
+.QuanLy{
+    padding-top:100px;
+    background:#808080;
+    padding-bottom:20px;
+}
+.QuanLy .container{
+    background:#f2f2f2;
+    
+}
+.MenuQuanLy{
+    padding-top:20px;
+}
+.NoiDungQuanLy{
+    padding-top:20px;
+}
+.list-group{
+    list-style:none;
+}

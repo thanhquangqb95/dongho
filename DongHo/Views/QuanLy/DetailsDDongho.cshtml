@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "DetailsDDongho";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+
+<h2>DetailsDDongho</h2>
+@foreach (var item in Model)
+{
+    <table class="table">
+        <tr>
+            <th>hinh</th>
+            <th>Gia</th>
+        </tr>
+        <tr>
+            <th>
+            <img src="~/DONGHO/@Model.hinh"/></th>
+            <th>@Model.TenDongHo</th>
+        </tr>
+    </table>
+}
+

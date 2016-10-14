@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin Tài khoản</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/AdminLTE.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="~/Content/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- DATA TABLES -->
+    <link href="~/Content/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="~/Content/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/jquery-1.10.2.intellisense.js"></script>
+    <script src="~/scripts/bootstrap.min.js" type="text/javascript"></script>
+    <!-- DATA TABES SCRIPT -->
+    <script src="~/scripts/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="~/scripts/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="~/scripts/app.js" type="text/javascript"></script>
+    <script src="~/scripts/check_input.js" type="text/javascript"></script>
+    <script src="~/scripts/jquery.inputmask.js" type="text/javascript"></script>
+    <script src="~/scripts/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+</head>
+    <section class="content-header">
+        <h1>Chi tiết Đơn hàng<small>/ Danh sách</small></h1><ol class="breadcrumb"><li><a class="btn btn-primary btn-xsbtn-danger btn-xs" href="/admink/orders/list">Danh sách</a></li><li><a class="btn btn-danger btn-xs" href="/admink/orders/?show=pending">Đang duyệt</a></li><li><a class="btn btn-danger btn-xs" href="/admink/orders/?show=active">Đã duyệt</a></li><li><a class="btn btn-danger btn-xs" href="/admink/orders/?show=return">Đã hủy</a></li><li><a class="btn btn-danger btn-xs" href="/admink/orders/?show=complete">Hoàn tất</a></li></ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box-header">
+
+                </div>
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1" data-toggle="tab">Thông tin đặt hàng</a></li>
+                        <li><a href="#tab_2" data-toggle="tab">Chi tiết đơn hàng</a></li>
+                    </ul>
+                    <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade-in active" id="tab_1">
+                                <table id="" class="table table-bordered table-striped">
+                                    <tbody>
+                                        <tr><td width="150" class="title">Mã đơn hàng</td><td>982165641</td></tr>
+                                        <tr><td width="150" class="title">Họ Tên</td><td>Nguyen Van Thanh</td></tr>
+                                        <tr><td class="title">Email</td><td>q.style_love@yahoo.com</td></tr>
+                                        <tr><td class="title">Địa chỉ</td><td>250binh thanh, Phường 05, Bình Thạnh, Hồ Chí Minh</td></tr>
+                                        <tr><td class="title">Số điện thoại</td><td>01688408969</td></tr>
+                                        <tr><td class="title">Ngày đặt hàng</td><td><font color="red">07-10-2016 21:09:51</font></td></tr>
+                                        <tr><td class="title">Tổng tiền</td><td><font color="red">3,500</font> VND</td></tr>
+                                        <tr><td class="title">Ghi chú</td><td>ádasd</td></tr>
+                                        <tr><td class="title">Tình trạng</td><td style="">Đang duyệt</td></tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- /.tab-pane -->
+                        <div role="tabpanel" class="tab-pane fade-in active" id="tab_2">
+                            <script src="/templates/backend/default/js/jquery.printPage.js" type="text/javascript"></script>
+                            <table id="" class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr><td width="150" class="title">Mã đơn hàng</td><td>982165641</td></tr>
+                                    <tr><td width="150" class="title">Họ Tên</td><td>Nguyen Van Thanh</td></tr>
+                                    <tr><td class="title">Email</td><td>q.style_love@yahoo.com</td></tr>
+                                    <tr><td class="title">Địa chỉ</td><td>250binh thanh, Phường 05, Bình Thạnh, Hồ Chí Minh</td></tr>
+                                    <tr><td class="title">Số điện thoại</td><td>01688408969</td></tr>
+                                    <tr><td class="title">Ngày đặt hàng</td><td><font color="red">07-10-2016 21:09:51</font></td></tr>
+                                    <tr><td class="title">Tổng tiền</td><td><font color="red">3,500</font> VND</td></tr>
+                                    <tr><td class="title">Ghi chú</td><td>ádasd</td></tr>
+                                    <tr><td class="title">Tình trạng</td><td style="">Đang duyệt</td></tr>
+                                </tbody>
+                            </table>
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+                                    $(".btnPrint").printPage();
+                                    $('#btnconfirm').click(function () {
+                                        $.post("/admink/orders/confirm", { id: $('#o_id').val(), o_status: $('#o_status').val() }, function (html) {
+                                            $("#msgconfirm").html(html);
+                                            setInterval(function () {
+                                                location.reload();
+                                            }, 2000);
+                                        });
+                                    });
+                                });
+                            </script>
+                        </div><!-- /.tab-pane -->
+                    </div><!-- /.tab-content -->
+                </div><!-- nav-tabs-custom -->
+            </div>
+        </div>
+    </section>

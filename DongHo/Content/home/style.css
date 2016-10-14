@@ -1,0 +1,473 @@
+﻿
+body {
+    margin: 0;
+    background: #f2f2f2;
+    color: #000;
+    font-weight: 400;
+    font-style: normal!important;
+    font-size: 14px;
+    font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+    line-height: 1.42857;
+    min-width: 718px;
+   
+}
+
+.container {
+    width: 95%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+#home {
+    background-attachment: fixed;
+    position: relative;
+}
+
+    #home header {
+        /*background-image:url("../image/baner/bg1.png");*/
+        background-attachment: fixed;
+        position: fixed;
+        z-index: 100;
+        display: block;
+        width: 100%;
+        top: 0px;
+        background-color:white;
+    }
+
+header {
+    position: fixed;
+    
+}
+
+    header .container {
+        background-color: white;
+    }
+
+    header .row {
+        background-color: white;
+    }
+.carousel-inner > .item > img {
+    padding-top: 10px;
+    height:500px;
+}
+
+    .logo > img {
+        width: 100%;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+.header-top {
+    float: right;
+    width: 100%;
+ 
+    color: #a37e2c;
+}
+/*option_nav*/
+.option_nav {
+    float: left;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+    .option_nav li {
+        float: left;
+        display: inline-block;
+        list-style: none;
+        margin-right: 20px;
+        position: relative;
+        font-weight: bold;
+    }
+
+        .option_nav li > a {
+            float: left;
+            font-size: 15px;
+            color: #f7544a;
+            text-transform: uppercase;
+        }
+
+        .option_nav li ul {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 25px;
+            border: 1px solid #f7544a;
+            -webkit-border-radius: 20px;
+            border-radius: 10px;
+            background: #fff;
+            padding: 5px 10px;
+            z-index: 100000;
+        }
+
+        .option_nav li:hover ul {
+            display: block;
+        }
+
+        .option_nav li ul li {
+            display: list-item;
+            list-style: none;
+            margin: 5px;
+        }
+
+            .option_nav li ul li a {
+                display: block;
+                text-align: center;
+                color: #434343;
+                background: none;
+                padding: 0;
+                line-height: 14px;
+            }
+
+                .option_nav li ul li a:hover {
+                    color: #f7544a;
+                }
+
+/*top menu*/
+.topmenu {
+    float: right;
+    width: auto;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+    .topmenu li {
+        float: left;
+        border-left: 1px solid #a37e2c;
+        padding: 0 8px;
+        list-style: none;
+        font-weight: bold;
+        font-family: "SegoeUI";
+        line-height: 41px;
+    }
+
+        .topmenu li:first-child {
+            border: none;
+            padding-left: 0;
+        }
+
+        .topmenu li:last-child {
+            margin-right: 0;
+            padding-right: 0;
+        }
+
+        .topmenu li a {
+            font-size: 13px;
+            text-transform: uppercase;
+            display: block;
+            color: #a37e2c;
+            line-height: 12px;
+        }
+
+            .topmenu li a:hover {
+                color: cadetblue;
+            }
+
+.usermenu {
+    float: right;
+    padding-top: 10px;
+}
+
+    .usermenu ul {
+        padding-left: 10px;
+    }
+
+    .usermenu li {
+        float: left;
+        margin-left: 25px;
+        list-style: none;
+        font-weight: bold;
+    }
+
+        .usermenu li:first-child {
+            margin-left: 0;
+        }
+
+        .usermenu li a {
+            font-size: 15px;
+            text-transform: uppercase;
+            display: block;
+            float: left;
+            padding-right: 5px;
+            color: #006039;
+        }
+
+            .usermenu li a:hover {
+                color: red;
+            }
+
+
+/*header*/
+
+.menu-nav {
+    color: black !important;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: bold;
+    font-family: "SegoeUI";
+    line-height: 41px;
+}
+
+    .menu-nav li a {
+        color: #006039;
+    }
+
+    .menu-nav li {
+        width: 20%;
+        padding: 0px 10px;
+    }
+
+        .menu-nav li a a:hover {
+            color: none;
+        }
+
+    .menu-nav li {
+        position: relative;
+        display: block;
+    }
+.navbar-nav{
+    padding-top:10px;
+}
+.navbar-nav > li > a {
+    padding: 5px 0px;
+}
+
+
+
+/*footer*/
+footer {
+    background-color: #dbdbdb;
+    width: 100%;
+}
+
+.logo-bottom > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.share-logo-link {
+    padding-bottom: 20px;
+}
+
+    .share-logo-link > a {
+        color: white;
+        padding-right: 5px;
+    }
+
+        .share-logo-link > a > i {
+            padding-right: 10px;
+        }
+
+.footer-bottom {
+    clear: both;
+}
+
+    .footer-bottom > .container {
+        width: 95%;
+    }
+/*footer column*/
+.footer-column {
+    color: black;
+    padding-bottom: 50px;
+}
+
+.title-footer {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.textwidget > ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: #dbdbdb;
+}
+
+    .textwidget > ul > li {
+        margin-bottom: 15px;
+        float: none;
+    }
+
+.textwidget ul > li a {
+    display: block;
+    font-size: 14px;
+    color: #9d9d9d;
+    text-align: left;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container-footer {
+    width: 95%;
+}
+/*footer-link*/
+.hr-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2px solid #357ebd;
+}
+
+.footer-link {
+    width: 95%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-end {
+}
+
+    .footer-end > p {
+        margin: 0px;
+        padding-bottom: 30px;
+    }
+/*Nội Dung*/
+.NoiDung {
+    margin-top: 100px;
+    /*padding-bottom:40px;*/
+    /*background-image: url("../image/logo/rolex-logo-text.png");*/
+}
+
+/*Sản Phẩm*/
+.SanPham {
+    background-color: white;
+}
+/*Danh Mục*/
+.DanhMuc {
+    background-color: white;
+    border: inset;
+    border-color: #1daaa3;
+}
+
+.item img {
+    width: 100%;
+}
+
+.QC-1 {
+    /*background-image: url("../image/baner/bg1.png");*/
+}
+
+    .QC-1 img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+
+    }
+
+.row {
+    width: 100%;
+}
+
+/*BodyREading*/
+.show {
+    /*background-color: white;*/
+    /*background-image: url("../image/logo/rolex-logo-text.png");*/
+}
+
+    .show .text-link {
+        background-color: white;
+    }
+
+    .show .row {
+    }
+
+.breadcrumb {
+    padding: 20px 15px !important;
+    margin-bottom: 0px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+    .breadcrumb .container {
+    }
+
+    .breadcrumb ul {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .breadcrumb a {
+        font-size: 15px !important;
+        color: red;
+    }
+
+.text-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    .text-link a {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "SegoeUI";
+        letter-spacing: 2px;
+    }
+
+.img-show {
+    padding-bottom: 20px;
+}
+
+.btn-default a:hover {
+    text-decoration: none;
+    border: none;
+}
+.show .thumbnail{
+    border-color:#a94442;
+}
+.img-show .thumbnail{
+    border-color:#a94442;
+}
+.show-chitiet {   
+    background-image: url('../image/baner.01.jpg');
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+}
+.Login {
+    background-image: url('../image/baner/slide2.jpg');
+    color: white;
+}
+
+.video-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.video-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}

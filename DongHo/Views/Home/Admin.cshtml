@@ -3,106 +3,106 @@
     Layout = null;
 }
 
+<!DOCTYPE html>
 <html>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Đăng Nhập</title>
+    <title>Admin |Đăng Nhập </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+  
+    <link href="~/Content/boostrap/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+ 
+    <Link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Ionicons -->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
-    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
-    <link rel="stylesheet" href="~/Content/form-elements.css">
-    <link rel="stylesheet" href="~/Content/style.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link href="~/Content/ionic/ionicons.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+   
+    
+    <link href="~/Content/AdminLTE/AdminLTE.min.css" rel="stylesheet" />
+    <!-- iCheck -->
+    
+    <link href="~/Content/icheck/blue.css" rel="stylesheet" />
+  
 
 </head>
-
-<body>
-
-    <!-- Top content -->
-    <div class="top-content">
-
-        <div class="inner-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1><strong></strong></h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3 form-box">
-                        <div class="form-top">
-                            <div class="form-top-left">
-                                <h3>Màn Hình Đăng Nhập</h3>
-                                <p>Nhập tên và mật Khẩu để đăng nhập vào hệ thống</p>
-                            </div>
-                        </div>
-                        <div class="form-bottom">
-                            <form role="form" action="" method="post" class="login-form">
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-username">ID</label>
-                                    <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-password">Password</label>
-                                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
-                                </div>
-                                <button type="submit" class="btn">Đăng Nhập</button>
-                                
-                                
-                            </form>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3 social-login">
-                        <div class="social-login-buttons">
-                            <a class="btn btn-link-1 btn-link-1-facebook" href="#">
-                                <i class="fa fa-facebook"></i> Facebook
-                            </a>
-                            <a class="btn btn-link-1 btn-link-1-twitter" href="#">
-                                <i class="fa fa-twitter"></i> Twitter
-                            </a>
-                            <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
-                                <i class="fa fa-google-plus"></i> Google Plus
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../index2.html"><b>Admin</b>Đăng Nhập</a>
         </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Đăng Nhập để quản trị web</p>
 
+            <form action="~/QuanLy/QLSANPHAM" method="post">
+                <div class="form-group has-feedback">
+                    <input type="email" class="form-control" placeholder="Tài Khoản">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="Mật Khẩu">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        @*<div class="checkbox icheck">
+                            <label>
+                                <input type="checkbox"> Ghi Nhớ 
+                            </label>
+                        </div>*@
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng Nhập</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+
+            <div class="social-auth-links text-center">
+                <p>- OR -</p>
+                <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
+                    <i class="fa fa-facebook"></i> Đăng Nhập với
+                    Facebook
+                </a>
+                <a href="#" class="btn btn-block btn-social btn-google btn-flat">
+                    <i class="fa fa-google-plus"></i> Đăng Nhập với 
+                    Google+
+                </a>
+            </div>
+            <!-- /.social-auth-links -->
+
+            <a href="#">Bạn không nhớ mật khẩu</a><br>
+            <a href="register.html" class="text-center">Register a new membership</a>
+
+        </div>
+        <!-- /.login-box-body -->
     </div>
-
-
-    <!-- Javascript -->
-    <script src="~/scripts/jquery-1.11.1.min.js"></script>
-    <script src="~/scripts/jquery-1.11.1.min.js"></script>
+    <!-- /.login-box -->
+    <!-- jQuery 3.1.1 -->
+  
+    <script src="~/scripts/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap  -->
+   
     <script src="~/scripts/bootstrap.min.js"></script>
-    <script src="~/scripts/jquery.backstretch.min.js"></script>
-    <script src="~/scripts/scripts.js"></script>
-
-    <!--[if lt IE 10]>
-        <script src="~/scripts/placeholder.js"></script>
-    <![endif]-->
-
+    <!-- iCheck -->
+    <script src="~/scripts/icheck.min.js"></script>
+    
+    
+ 
+    <script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+    </script>
 </body>
-
 </html>

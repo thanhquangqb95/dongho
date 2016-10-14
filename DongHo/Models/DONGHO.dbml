@@ -7,11 +7,8 @@
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TongGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="CTDDH_PhieuGiaoHang" Member="PhieuGiaoHangs" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="PhieuGiaoHang" />
-      <Association Name="CTDDH_PhieuGiaoHang1" Member="PhieuGiaoHang1s" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="PhieuGiaoHang1" />
       <Association Name="DONDATHANG_CTDDH" Member="DONDATHANG" ThisKey="MaDDH" OtherKey="MaDDH" Type="DONDATHANG" IsForeignKey="true" />
       <Association Name="DONGHO_CTDDH" Member="DONGHO" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO" IsForeignKey="true" />
-      <Association Name="DONGHO1_CTDDH" Member="DONGHO1" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO1" IsForeignKey="true" />
-      <Association Name="DONDATHANG1_CTDDH" Member="DONDATHANG1" ThisKey="MaDDH" OtherKey="MaDDH" Type="DONDATHANG1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CTKM" Member="CTKMs">
@@ -21,8 +18,6 @@
       <Column Name="MucKM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DONGHO_CTKM" Member="DONGHO" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO" IsForeignKey="true" />
       <Association Name="KHUYENMAI_CTKM" Member="KHUYENMAI" ThisKey="MaKM" OtherKey="MaKM" Type="KHUYENMAI" IsForeignKey="true" />
-      <Association Name="KHUYENMAI1_CTKM" Member="KHUYENMAI1" ThisKey="MaKM" OtherKey="MaKM" Type="KHUYENMAI1" IsForeignKey="true" />
-      <Association Name="DONGHO1_CTKM" Member="DONGHO1" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DONDATHANG" Member="DONDATHANGs">
@@ -34,9 +29,7 @@
       <Column Name="NgayGiao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="DONDATHANG_CTDDH" Member="CTDDHs" ThisKey="MaDDH" OtherKey="MaDDH" Type="CTDDH" />
-      <Association Name="DONDATHANG_CTDDH1" Member="CTDDH1s" ThisKey="MaDDH" OtherKey="MaDDH" Type="CTDDH1" />
       <Association Name="KHACHHANG_DONDATHANG" Member="KHACHHANG" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG" IsForeignKey="true" />
-      <Association Name="KHACHHANG1_DONDATHANG" Member="KHACHHANG1" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DONGHO" Member="DONGHOs">
@@ -51,12 +44,8 @@
       <Column Name="GioiTinh" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Association Name="DONGHO_CTDDH" Member="CTDDHs" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTDDH" />
       <Association Name="DONGHO_CTKM" Member="CTKMs" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTKM" />
-      <Association Name="DONGHO_CTKM1" Member="CTKM1s" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTKM1" />
-      <Association Name="DONGHO_CTDDH1" Member="CTDDH1s" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTDDH1" />
-      <Association Name="LOAISP_DONGHO" Member="LOAISP" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAISP" IsForeignKey="true" />
       <Association Name="NHACUNGCAP_DONGHO" Member="NHACUNGCAP" ThisKey="MaNCC" OtherKey="MaNCC" Type="NHACUNGCAP" IsForeignKey="true" />
-      <Association Name="NHACUNGCAP1_DONGHO" Member="NHACUNGCAP1" ThisKey="MaNCC" OtherKey="MaNCC" Type="NHACUNGCAP1" IsForeignKey="true" />
-      <Association Name="LOAISP1_DONGHO" Member="LOAISP1" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAISP1" IsForeignKey="true" />
+      <Association Name="LOAISP_DONGHO" Member="LOAISP" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAISP" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
@@ -66,7 +55,6 @@
       <Column Name="SDT" Type="System.String" DbType="Char(100)" CanBeNull="true" />
       <Column Name="MatKhau" Type="System.String" DbType="Char(100)" CanBeNull="true" />
       <Association Name="KHACHHANG_DONDATHANG" Member="DONDATHANGs" ThisKey="MaKH" OtherKey="MaKH" Type="DONDATHANG" />
-      <Association Name="KHACHHANG_DONDATHANG1" Member="DONDATHANG1s" ThisKey="MaKH" OtherKey="MaKH" Type="DONDATHANG1" />
     </Type>
   </Table>
   <Table Name="dbo.KHUYENMAI" Member="KHUYENMAIs">
@@ -74,24 +62,6 @@
       <Column Name="MaKM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenKM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="KHUYENMAI_CTKM" Member="CTKMs" ThisKey="MaKM" OtherKey="MaKM" Type="CTKM" />
-      <Association Name="KHUYENMAI_CTKM1" Member="CTKM1s" ThisKey="MaKM" OtherKey="MaKM" Type="CTKM1" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LOAISP" Member="LOAISPs">
-    <Type Name="LOAISP">
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="LOAISP_DONGHO" Member="DONGHOs" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO" />
-      <Association Name="LOAISP_DONGHO1" Member="DONGHO1s" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO1" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NHACUNGCAP" Member="NHACUNGCAPs">
-    <Type Name="NHACUNGCAP">
-      <Column Name="MaNCC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenNSX" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="NHACUNGCAP_DONGHO" Member="DONGHOs" ThisKey="MaNCC" OtherKey="MaNCC" Type="DONGHO" />
-      <Association Name="NHACUNGCAP_DONGHO1" Member="DONGHO1s" ThisKey="MaNCC" OtherKey="MaNCC" Type="DONGHO1" />
     </Type>
   </Table>
   <Table Name="dbo.PhieuGiaoHang" Member="PhieuGiaoHangs">
@@ -101,123 +71,27 @@
       <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="CTDDH_PhieuGiaoHang" Member="CTDDH" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="CTDDH" IsForeignKey="true" />
-      <Association Name="CTDDH1_PhieuGiaoHang" Member="CTDDH1" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="CTDDH1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHACUNGCAP" Member="NHACUNGCAPs">
+    <Type Name="NHACUNGCAP">
+      <Column Name="MaNCC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNSX" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="NHACUNGCAP_DONGHO" Member="DONGHOs" ThisKey="MaNCC" OtherKey="MaNCC" Type="DONGHO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAISP" Member="LOAISPs">
+    <Type Name="LOAISP">
+      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAISP_DONGHO" Member="DONGHOs" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO" />
     </Type>
   </Table>
   <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
     <Type Name="TaiKhoan">
       <Column Name="TaiKhoan" Member="TaiKhoan1" Type="System.String" DbType="NChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MatKhau" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TaiKhoan" Member="TaiKhoan1s">
-    <Type Name="TaiKhoan1">
-      <Column Name="TaiKhoan" Type="System.String" DbType="NChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MatKhau" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PhieuGiaoHang" Member="PhieuGiaoHang1s">
-    <Type Name="PhieuGiaoHang1">
-      <Column Name="MaPGH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TongGia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="CTDDH_PhieuGiaoHang1" Member="CTDDH" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="CTDDH" IsForeignKey="true" />
-      <Association Name="CTDDH1_PhieuGiaoHang1" Member="CTDDH1" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="CTDDH1" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NHACUNGCAP" Member="NHACUNGCAP1s">
-    <Type Name="NHACUNGCAP1">
-      <Column Name="MaNCC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenNSX" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="NHACUNGCAP1_DONGHO" Member="DONGHOs" ThisKey="MaNCC" OtherKey="MaNCC" Type="DONGHO" />
-      <Association Name="NHACUNGCAP1_DONGHO1" Member="DONGHO1s" ThisKey="MaNCC" OtherKey="MaNCC" Type="DONGHO1" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LOAISP" Member="LOAISP1s">
-    <Type Name="LOAISP1">
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="LOAISP1_DONGHO" Member="DONGHOs" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO" />
-      <Association Name="LOAISP1_DONGHO1" Member="DONGHO1s" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO1" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KHUYENMAI" Member="KHUYENMAI1s">
-    <Type Name="KHUYENMAI1">
-      <Column Name="MaKM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenKM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="KHUYENMAI1_CTKM" Member="CTKMs" ThisKey="MaKM" OtherKey="MaKM" Type="CTKM" />
-      <Association Name="KHUYENMAI1_CTKM1" Member="CTKM1s" ThisKey="MaKM" OtherKey="MaKM" Type="CTKM1" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KHACHHANG" Member="KHACHHANG1s">
-    <Type Name="KHACHHANG1">
-      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenKH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="Char(100)" CanBeNull="true" />
-      <Column Name="MatKhau" Type="System.String" DbType="Char(100)" CanBeNull="true" />
-      <Association Name="KHACHHANG1_DONDATHANG" Member="DONDATHANGs" ThisKey="MaKH" OtherKey="MaKH" Type="DONDATHANG" />
-      <Association Name="KHACHHANG1_DONDATHANG1" Member="DONDATHANG1s" ThisKey="MaKH" OtherKey="MaKH" Type="DONDATHANG1" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DONGHO" Member="DONGHO1s">
-    <Type Name="DONGHO1">
-      <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MaNCC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenDongHo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="hinh" Type="System.String" DbType="Char(100)" CanBeNull="true" />
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="GioiTinh" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Association Name="DONGHO1_CTDDH" Member="CTDDHs" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTDDH" />
-      <Association Name="DONGHO1_CTKM" Member="CTKMs" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTKM" />
-      <Association Name="DONGHO1_CTKM1" Member="CTKM1s" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTKM1" />
-      <Association Name="DONGHO1_CTDDH1" Member="CTDDH1s" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTDDH1" />
-      <Association Name="LOAISP_DONGHO1" Member="LOAISP" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAISP" IsForeignKey="true" />
-      <Association Name="LOAISP1_DONGHO1" Member="LOAISP1" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAISP1" IsForeignKey="true" />
-      <Association Name="NHACUNGCAP_DONGHO1" Member="NHACUNGCAP" ThisKey="MaNCC" OtherKey="MaNCC" Type="NHACUNGCAP" IsForeignKey="true" />
-      <Association Name="NHACUNGCAP1_DONGHO1" Member="NHACUNGCAP1" ThisKey="MaNCC" OtherKey="MaNCC" Type="NHACUNGCAP1" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DONDATHANG" Member="DONDATHANG1s">
-    <Type Name="DONDATHANG1">
-      <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ThanhToan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="GiaHang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="NgayDat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="NgayGiao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="DONDATHANG1_CTDDH" Member="CTDDHs" ThisKey="MaDDH" OtherKey="MaDDH" Type="CTDDH" />
-      <Association Name="DONDATHANG1_CTDDH1" Member="CTDDH1s" ThisKey="MaDDH" OtherKey="MaDDH" Type="CTDDH1" />
-      <Association Name="KHACHHANG_DONDATHANG1" Member="KHACHHANG" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG" IsForeignKey="true" />
-      <Association Name="KHACHHANG1_DONDATHANG1" Member="KHACHHANG1" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG1" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CTKM" Member="CTKM1s">
-    <Type Name="CTKM1">
-      <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaKM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MucKM" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DONGHO_CTKM1" Member="DONGHO" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO" IsForeignKey="true" />
-      <Association Name="DONGHO1_CTKM1" Member="DONGHO1" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO1" IsForeignKey="true" />
-      <Association Name="KHUYENMAI_CTKM1" Member="KHUYENMAI" ThisKey="MaKM" OtherKey="MaKM" Type="KHUYENMAI" IsForeignKey="true" />
-      <Association Name="KHUYENMAI1_CTKM1" Member="KHUYENMAI1" ThisKey="MaKM" OtherKey="MaKM" Type="KHUYENMAI1" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CTDDH" Member="CTDDH1s">
-    <Type Name="CTDDH1">
-      <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TongGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="CTDDH1_PhieuGiaoHang" Member="PhieuGiaoHangs" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="PhieuGiaoHang" />
-      <Association Name="CTDDH1_PhieuGiaoHang1" Member="PhieuGiaoHang1s" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="PhieuGiaoHang1" />
-      <Association Name="DONDATHANG_CTDDH1" Member="DONDATHANG" ThisKey="MaDDH" OtherKey="MaDDH" Type="DONDATHANG" IsForeignKey="true" />
-      <Association Name="DONDATHANG1_CTDDH1" Member="DONDATHANG1" ThisKey="MaDDH" OtherKey="MaDDH" Type="DONDATHANG1" IsForeignKey="true" />
-      <Association Name="DONGHO_CTDDH1" Member="DONGHO" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO" IsForeignKey="true" />
-      <Association Name="DONGHO1_CTDDH1" Member="DONGHO1" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="DONGHO1" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

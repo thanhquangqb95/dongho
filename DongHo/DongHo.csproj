@@ -126,21 +126,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AdminLTE.css" />
-    <Content Include="Content\AdminLTE.min.css" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Danhmuc.css" />
-    <Content Include="Content\font-awesome.css" />
-    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\AdminLTE\AdminLTE.css" />
+    <Content Include="Content\AdminLTE\AdminLTE.min.css" />
+    <Content Include="Content\icheck\blue.css" />
+    <Content Include="Content\boostrap\bootstrap-theme.css" />
+    <Content Include="Content\boostrap\bootstrap-theme.min.css" />
+    <Content Include="Content\boostrap\bootstrap.css" />
+    <Content Include="Content\boostrap\bootstrap.min.css" />
+    <Content Include="Content\home\Danhmuc.css" />
     <Content Include="Content\form-elements.css" />
+    <Content Include="Content\icheck\_all-skins.css" />
+    <Content Include="Content\icheck\_all-skins.min.css" />
+    <Content Include="Content\ionic\ionicons.css" />
+    <Content Include="Content\ionic\ionicons.min.css" />
     <Content Include="Content\jquery-jvectormap-1.2.2.css" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\Quang.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Content\style.css" />
+    <Content Include="Content\home\Quang.css" />
+    <Content Include="Content\home\Site.css" />
+    <Content Include="Content\home\style.css" />
     <Content Include="DongHoNam\N10.jpg" />
     <Content Include="DongHoNam\N11.jpg" />
     <Content Include="DongHoNam\N12.jpg" />
@@ -288,6 +291,8 @@
     <Content Include="fonts\fontello.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HinhNivo\m178341_0010_datejust-31_0001_2550x1427.jpg" />
+    <Content Include="HinhNivo\yacht-master-40_m116622-0003_2550x1427.jpg" />
     <Content Include="image\baner\baner1.png" />
     <Content Include="image\baner\bg1.png" />
     <Content Include="image\baner\bia1.jpg" />
@@ -296,6 +301,8 @@
     <Content Include="image\baner\slide2.jpg" />
     <Content Include="image\baner\slide3.jpg" />
     <Content Include="image\baner\slide4.jpg" />
+    <Content Include="image\baner.01.jpg" />
+    <Content Include="image\book_pendant_watch_black_and_white_67427_2048x1152.jpg" />
     <Content Include="image\dongho\DH1.2.jpg" />
     <Content Include="image\dongho\DH1.jpg" />
     <Content Include="image\dongho\DH2.jpg" />
@@ -305,7 +312,19 @@
     <Content Include="image\dongho\DH5.jpg" />
     <Content Include="image\dongho\DH6.2.jpg" />
     <Content Include="image\giohang.gif" />
+    <Content Include="image\logo\rolex-logo-text.png" />
     <Content Include="image\logo\rolex-logo.svg" />
+    <Content Include="image\logo\rolex-text.png" />
+    <Content Include="scripts\admin.js" />
+    <Content Include="scripts\app.js" />
+    <Content Include="scripts\app.min.js" />
+    <Content Include="scripts\demo.js" />
+    <Content Include="scripts\fastclick.min.js" />
+    <Content Include="scripts\icheck.min.js" />
+    <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery.nivo.slider.js" />
+    <Content Include="scripts\jquery.nivo.slider.pack.js" />
+    <Content Include="Content\nivo-slider.css" />
     <Content Include="QuangCao\quangcao %28Copy%29.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -314,18 +333,19 @@
     <Content Include="fonts\fontello.eot" />
     <Content Include="fonts\fontello.ttf" />
     <Content Include="fonts\fontello.woff" />
+    <Content Include="Content\boostrap\bootstrap-theme.css.map" />
+    <Content Include="Content\boostrap\bootstrap.css.map" />
+    <Content Include="scripts\custom.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\boostrap\bootstrap.min.css.map" />
+    <Content Include="Content\boostrap\bootstrap-theme.min.css.map" />
     <Content Include="Models\DONGHO.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DONGHO.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="scripts\custom.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
     <None Include="scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery-3.1.1.js" />
     <Content Include="scripts\jquery-3.1.1.min.js" />
     <Content Include="scripts\jquery-3.1.1.slim.js" />
@@ -346,15 +366,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DONGHO.cs">
-      <DependentUpon>DONGHO.dbml</DependentUpon>
-    </Compile>
+    <Compile Include="Models\ChiTietDatHang.cs" />
+    <Compile Include="Models\ChiTietDonDatHang.cs" />
     <Compile Include="Models\DONGHO.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DONGHO.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\SanPhamNu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -395,6 +415,14 @@
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="scripts\jquery-3.1.1.min.map" />
     <Content Include="scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Views\Home\asdasd.cshtml" />
+    <Content Include="Views\Home\vuivui.cshtml" />
+    <Content Include="Views\Home\vuivuiu.cshtml" />
+    <Content Include="Views\QuanLy\DetailsDDH.cshtml" />
+    <Content Include="Views\QuanLy\DetailsDDongho.cshtml" />
+    <Content Include="Views\QuanLy\DonDatHang.cshtml" />
+    <Content Include="Views\QuanLy\updateĐH.cshtml" />
+    <Content Include="Views\QuanLy\DatHang.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

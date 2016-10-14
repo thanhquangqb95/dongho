@@ -3,90 +3,131 @@
     ViewBag.Title = "Rolex";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
-<div class="home-slider">
-    <div class="">        
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/fonts.css" rel="stylesheet" />
+    <link href="~/Content/screen.css" rel="stylesheet" />
+    <link href="~/Content/TrangChu.css" rel="stylesheet" />
+    @*add nivoslider*@
+    <link href="~/Contenr/nivo-slider.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/jquery.nivo.slider.js"></script>
+    <script src="~/scripts/jquery.nivo.slider.pack.js"></script>
+</head>
+<body>
+    @*<section class="blank">
+        <div class="rlx-sticky-header__inner">
+            <div id="slider" class="nivoSlider">
+                <img src="~/HinhNivo/m178341_0010_datejust-31_0001_2550x1427.jpg" />
+                <img src="~/HinhNivo/yacht-master-40_m116622-0003_2550x1427.jpg" />
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(window).load(function(){
+            $('#slider').nivoSlider();
+            });
+        </script>
+        <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                controlNav: false,
+                nextText: '',
+                prevText: '',
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="~/image/baner/bia1.jpg" alt="Ảnh Bìa Rolex">
-                        <div class="carousel-caption">                          
-                        </div>
+
+            });
+        });
+        </script>
+    </section>*@
+    <div class="home-slider">
+    <div class="">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/image/baner/bia1.jpg" alt="Ảnh Bìa Rolex">
+                    <div class="carousel-caption">
                     </div>
-                    <div class="item">
-                        <img src="~/image/baner/Bia2.jpg" alt="Ảnh Bìa Rolẽ">
-                        <div class="carousel-caption">
-                         
-                        </div>
+                </div>
+                <div class="item">
+                    <img src="~/image/baner/Bia2.jpg" alt="Ảnh Bìa Rolẽ">
+                    <div class="carousel-caption">
+
                     </div>
-                  
                 </div>
 
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>              
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
- </div>
-<div class="QC-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
-            </div>
-            <div class="col-md-4">
-                <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
-            </div>
-            <div class="col-md-4">
-                <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
+    </div>
+    <div class="QC-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" >
+                <a  href="@Url.Action("donghonew","Home")">
+                    <img src="~/image/baner/baner1.png" alt="New Rolex 2016"/>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
+                </div>
+                <div class="col-md-4">
+                    <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
+                </div>
             </div>
         </div>
     </div>
-</div>
- <div class="show">
-    <div class="container">
-
-        <div class="text-link">
-            <a>@Html.ActionLink("Đồng Hồ Mới", "donghonew")</a>
-        </div>
-
-        <div class="row" style="text-align:center">
-            @foreach (var dongho in Model)
+    <div class="show">
+        <div class="container">
+            <div class="text-link">
+                <a>@Html.ActionLink("Đồng Hồ Mới", "donghonew")</a>
+            </div>
+            <div class="row" style="text-align:center">
+                @foreach (var dongho in Model)
             {
-                <div class="col-md-3 col-sm-6">
-                    <div class="img-show">
-
-                        <div class="thumbnail">
-                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
-                                <img src=" ~/DongHoNam/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
-                                <p>@dongho.TenDongHo</p>
-                            </a>
-                            <p>Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
-                            <button type="button" class="btn btn-default">@Html.ActionLink("Xem Hàng", "Details", new { id = dongho.MaDongHo })</button>
-                            <button type="button" class="btn btn-default" href="~/GioHang/DatHang.cshtml">Mua Hàng</button>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="img-show">
+                            <div class="thumbnail">
+                                <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
+                                    <img src=" ~/DongHoNam/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
+                                    <p>@dongho.TenDongHo</p>
+                                </a>
+                                <p>Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
+                                <button type="button" class="btn btn-default">@Html.ActionLink("Xem Hàng", "Details", new { id = dongho.MaDongHo })</button>
+                                <button type="button" class="btn btn-default" href="~/GioHang/DatHang.cshtml">Mua Hàng</button>
+                            </div>
                         </div>
-
                     </div>
-                </div>
-            }
-
+                }
+            </div>
         </div>
-
     </div>
-</div>
+   @RenderPage("~/Views/Home/donghotot.cshtml");
+    <div class="video video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6PXvdOlNgtI?autoplay=1" frameborder="0" allowfullscreen ></iframe>
+        
+    </div>
+  
+       
+</body>
+
    
        
 
