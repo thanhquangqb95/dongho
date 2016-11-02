@@ -24,6 +24,7 @@ namespace DongHo.Controllers
             var ten = colection["name"];
             var SDT = colection["phonenumble"];
             var MatKhau = colection["password"];
+            var DiaChi = colection["DiaChi"];
             var NLMatKhau = colection["password2"];
             if (String.IsNullOrEmpty(ten))
             {
@@ -44,6 +45,7 @@ namespace DongHo.Controllers
                     kh.TenKH = ten;
                     kh.SDT = SDT;
                     kh.MatKhau = MatKhau;
+                    kh.DiaChi = DiaChi;
                     data.KHACHHANGs.InsertOnSubmit(kh);
                     data.SubmitChanges();
                 }

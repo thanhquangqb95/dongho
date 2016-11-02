@@ -1,9 +1,10 @@
-﻿
+﻿@using DongHo.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DONGHO>
 @{
-    ViewBag.Title = "SanPhamNam";
+    ViewBag.Title = "Đồng Hồ Nam";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
-
 @*link dẫn*@
 <div class="breadcrumb">
     <div class="container">
@@ -21,31 +22,33 @@
 @*kShow sản phẩm nam*@
 <div class="show">
     <div class="container">
-
         <div class="text-link">
             <a>@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</a>
          </div>
-
         <div class="row" style="text-align:center">
             @foreach (var dongho in Model)
             {
-                <div class="col-md-3 col-sm-6">
+                <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="img-show">
        
                         <div class="thumbnail">
-                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})" >
-                                <img src=" ~/DongHoNam/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%"/>
-                                <p>@dongho.TenDongHo</p>
+                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
+                                <img src="~/DongHo/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
+                                <p><h5 style="color:#0005ed">@dongho.TenDongHo</h5></p>
                             </a>
-                                <p>Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>                            
-                                <button type="button" class="btn btn-default">@Html.ActionLink("Xem Hàng","Details",new { id = dongho.MaDongHo })</button>   
-                                <button type="button" class="btn btn-default" href="~/GioHang/DatHang.cshtml">Mua Hàng</button>                         
+                            <p style="color:#a37e2c">Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
+                            <div id="DatMua" class="fc-button">
+                                <a href="@Url.Action("ThemGiohang", "GioHang",new {@iMasach = dongho.MaDongHo,@strURL= Request.Url.ToString()})" class="list-group-item" style="text-align:center;background-color:#006039"><h5 style="color:#a37e2c;height:10px;text-align:center">Đặt Mua</h5></a>
+                            </div>
                         </div>  
                         
                     </div>
                 </div>
             }
-
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+            <div class="MenuTrang">
+                @Html.PagedListPager(Model, page => Url.Action("SanPhamNam", new { page = page }))
+            </div>
         </div>
 
     </div>

@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DongHo.Models;
+//using DongHo.Models;
+using PagedList;
+using PagedList.Mvc;
 namespace DongHo.Controllers
 {
     public class HomeController : Controller
@@ -20,6 +22,10 @@ namespace DongHo.Controllers
             var dongho = laydonghomoi(8);
             return View(dongho);
         }
+        public ActionResult QuangCao()
+        {
+            return View();
+        }
         private IList<DONGHO> donghotot(int dem)
         {
             return data.DONGHOs.Where(b => b.MaLoai == 2).OrderByDescending(a => a.MaDongHo).Take(dem).ToList();
@@ -29,29 +35,38 @@ namespace DongHo.Controllers
             var dongho = donghotot(8);
             return View(dongho);
         }
+        public ActionResult donghotot2()
+        {
+            var dongho = donghotot(16);
+            return View(dongho);
+        }
         public ActionResult donghonew()
         {
             var dongho = donghotot(8);
             return View(dongho);
         }
-        public ActionResult SanPhamNu()
+        public ActionResult SanPhamNu(int? page)
         {
+            int pageSize = 16;
+            int pageNumber = (page ?? 1);
             var dongho = from dh in data.DONGHOs
                          where dh.MaLoai == 2
                          select dh;
-            return View(dongho);
+            return View(dongho.ToList().OrderByDescending(m => m.MaDongHo).ToPagedList(pageNumber, pageSize));
         }
-        public ActionResult SanPhamNam()
+        public ActionResult SanPhamNam(int? page)
         {
+            int pageSize = 16;
+            int pageNumber = (page ?? 1);
             var dongho = from dh in data.DONGHOs
                          where dh.MaLoai == 1
                          select dh;
-            return View(dongho);
+            return View(dongho.ToList().OrderByDescending(m => m.MaDongHo).ToPagedList(pageNumber, pageSize));
         }
         public ActionResult Details(int id)
         {
-            var dongho = from dh in data.DONGHOs where dh.MaDongHo == id select dh;
-            return View(dongho.Single());
+            CTSP ct = new CTSP(id);
+            return View(ct);
         }
         public ActionResult QuanLy()
         {
@@ -70,11 +85,11 @@ namespace DongHo.Controllers
             var matkhau = collection["password"];
             if (String.IsNullOrEmpty(tendn))
             {
-                ViewData["Loi1"] = "Phải nhập tên đăng nhập";
+                ViewBag.Thongbao1 = "Phải nhập tên đăng nhập";
             }
             else if (String.IsNullOrEmpty(matkhau))
             {
-                ViewData["Loi2"] = "Phải nhập mật khẩu";
+                ViewBag.Thongbao2 = "Phải nhập mật khẩu";
             }
             else
             {
@@ -83,7 +98,7 @@ namespace DongHo.Controllers
                 TaiKhoan ad = data.TaiKhoans.SingleOrDefault(n => n.TaiKhoan1 == tendn && n.MatKhau == matkhau);
                 if (ad != null)
                 {
-                    // ViewBag.Thongbao = "Chúc mừng đăng nhập thành công";
+                    ViewBag.Thongbao = "Chúc mừng đăng nhập thành công";
                     Session["Taikhoanadmin"] = ad;
                     return RedirectToAction("QuanLy","Home");
                 }
@@ -100,43 +115,83 @@ namespace DongHo.Controllers
         [HttpPost]
         public ActionResult KhachHang(FormCollection collection)
         {
-            var tendn = collection["username"];
-            var matkhau = collection["password"];
-            if (String.IsNullOrEmpty(tendn))
+            if (Session["MaKH"] == null)
             {
-                ViewData["Loi1"] = "Phải nhập tên đăng nhập";
-            }
-            else if (String.IsNullOrEmpty(matkhau))
-            {
-                ViewData["Loi2"] = "Phải nhập mật khẩu";
+                var tendn = collection["username"];
+                var matkhau = collection["password"];
+                if (String.IsNullOrEmpty(tendn))
+                {
+                    ViewBag.Thongbao = "Bạn chưa nhập Số Điện Thoại học Mật Khẩu";
+                }
+                else if (String.IsNullOrEmpty(matkhau))
+                {
+                    ViewBag.Thongbao = "Bạn chưa nhập Số Điện Thoại học Mật Khẩu";
+                }
+                else
+                {
+
+                    KHACHHANG kh = data.KHACHHANGs.SingleOrDefault(n => n.SDT == tendn && n.MatKhau == matkhau);
+                    if (kh != null)
+                    {
+                        // ViewBag.Thongbao = "Chúc mừng đăng nhập thành công";
+                        Session["Taikhoan"] = kh;
+                        Session["MaKH"] = kh.TenKH;
+                        ViewBag.hoten = kh.TenKH;
+                        return RedirectToAction("GioHang", "GioHang");
+                    }
+                    else
+                        ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng";
+                }
+                return View();
             }
             else
             {
-                //Gán giá trị cho đối tượng được tạo mới (ad)        
-
-                KHACHHANG kh = data.KHACHHANGs.SingleOrDefault(n => n.SDT == tendn && n.MatKhau == matkhau);
-                if (kh != null)
-                {
-                    // ViewBag.Thongbao = "Chúc mừng đăng nhập thành công";
-                    Session["Taikhoan"] = kh;
-                    return RedirectToAction("GioHang", "GioHang");
-                }
-                else
-                    ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng";
+                return RedirectToAction("Home", "Index");
             }
-            return View();
         }
-        public ActionResult vuivui()
+        public string laytenkh()
         {
-            return View();
+            string ten;
+            if (Session["MaKH"] != null)
+            {
+
+                ten = Session["MaKH"].ToString();
+            }
+            else
+            {
+                ten = "MY ACCOUNT";
+            }
+            return ten;
         }
-        public ActionResult vuivuiu()
+        public ActionResult TenKH()
         {
-            return View();
+            ViewBag.TenKH1 = laytenkh();
+                return PartialView();
+
         }
-        public ActionResult asdasd()
+        [HttpPost]
+        public ActionResult TimKiem(FormCollection collection, int? page)
         {
-            return View();
+            int pageSize = 16;
+            int pageNumber = (page ?? 1);
+            var tendn = collection["TimKiem"];
+            ViewBag.tendn = tendn;
+            List<DONGHO> dh = data.DONGHOs.Where(m => m.TenDongHo.Contains(tendn)).ToList();
+            if(dh.Count ==0)
+            {
+                ViewBag.ThongBao1 = "Không Tim Thấy Tên Sản Phẩm Vừa Nhập";
+                return View();
+            }
+            return View(dh.OrderBy(n=>n.TenDongHo).ToPagedList(pageNumber, pageSize));
+        }
+        [HttpGet]
+        public ActionResult TimKiem( int? page ,string tendn1)
+        {
+            int pageSize = 16;
+            int pageNumber = (page ?? 1);
+            ViewBag.tendn = tendn1;
+            List<DONGHO> dh = data.DONGHOs.Where(m => m.TenDongHo.Contains(tendn1)).ToList();
+            return View(dh.OrderBy(n => n.TenDongHo).ToPagedList(pageNumber, pageSize));
         }
     }
 

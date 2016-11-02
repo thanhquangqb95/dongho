@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+<head>
+    <link rel="icon" href="~/ICON/misc_rolex.gif" type="image/gif">
+    <script type="text/javascript">
+var time = 32; // Thời gian đếm ngược
+var page = "@Url.Action("Index", "Home")"; // Trang bạn muốn chuyển đến
+function countDown(){
+time--;
+gett("timecount").innerHTML = time;
+if(time == -1){
+window.location = page;
+}
+}
+function gett(id){
+if(document.getElementById) return document.getElementById(id);
+if(document.all) return document.all.id;
+if(document.layers) return document.layers.id;
+if(window.opera) return window.opera.id;
+}
+function init(){
+if(gett('timecount')){
+setInterval(countDown, 1000);
+gett("timecount").innerHTML = time;
+}
+else{
+setTimeout(init, 50);
+}
+}
+document.onload = init();
+    </script>
+    
+    @*CSS*@
+    <link href="~/Content/boostrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/boostrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/home/style.css" rel="stylesheet" />
+    @*icon*@
+    <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    @*font*@
+    @*<link rel="dns-prefetch" href="//fonts.googleapis.com">*@
+</head>
+<body id="home">
+    <header>
+        <div class="col-md-12 col-sm-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                        <div class="logo col-md-12">
+                            <a href="~/Home/Index" class="logo"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10 ">
+                        <div class="col-md-12">
+                            <div class="header-top">                        
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            @*<div class="menu-nav">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="nav navbar-nav">
+                                            <li class="col-md-2">@Html.ActionLink("Đồng Hồ Mới", "donghonew", "Home")</li>
+                                            <li class="col-md-2">@Html.ActionLink("Đồng Hồ Hot", "donghotot", "Home")</li>
+                                            <li class="col-md-2">@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam", "Home")</li>
+                                            <li class="col-md-2">@Html.ActionLink("Đồng Hồ Nữ", "SanPhamNu", "Home")</li>
+                                            <li class="col-md-2"><a><input type="text" class="search-query " placeholder="Tìm Kiếm"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="web">
+        <div class="NoiDung">
+            <div class="video video-responsive">
+                <h3>Trang sẽ tự chuyển sau <span id="timecount"></span> giây!</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6PXvdOlNgtI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>

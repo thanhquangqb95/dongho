@@ -4,11 +4,11 @@
     ViewBag.Title = "DatHang";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
+<br />
+<h2 style="text-align:center;color:#bd6132">THÔNG TIN HÀNG HÓA</h2>
 
-<h2>DatHang</h2>
-<h2 style="text-align:center">THÔNG TIN HÀNG HÓA</h2>
 <table align="center" border="1">
-    <tr style="text-align:center; font-weight:bold">
+    <tr style="text-align:center; font-weight:bold; color:#074209">
         <td>  Mã Đồng Hồ </td>
         <td> Tên Đồng Hồ </td>
         <td> Hình Ảnh </td>
@@ -33,17 +33,17 @@
         </tr>
     }
     <tr style="font-weight: bold; text-align:right; color:red">
-        <td colspan="3"> Số lượng sách: @ViewBag.Tongsoluong </td>
-        <td colspan="3"> Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ </td>
+        <td colspan="3" style="color:#bd6132"> Số lượng sách: @ViewBag.Tongsoluong </td>
+        <td colspan="3" style="color:#bd6132"> Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ </td>
     </tr>
     <tr style="font-weight: bold; color:blue; text-align:right ">
         <td colspan="6">
-            @Html.ActionLink("TRỞ VỀ GIỎ HÀNG", "Giohang", "GioHang")
+            @Html.ActionLink("TRỞ VỀ GIỎ HÀNG","Giohang", "GioHang")
         </td>
     </tr>
 </table>
 
-<h2 style="text-align:center">THÔNG TIN ĐẶT HÀNG</h2>
+<h2 style="text-align:center;color:#bd6132">THÔNG TIN ĐẶT HÀNG</h2>
 @{
     KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
 }
@@ -56,8 +56,12 @@
             <td style="font-weight:bold">  @kh.TenKH </td>
         </tr>
         <tr style="height:40px">
-            <td> Địa chỉ:</td>
+            <td> Số Điện Thoại:</td>
             <td style="font-weight:bold">  @kh.SDT </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Địa Chỉ:</td>
+            <td style="font-weight:bold">  @kh.DiaChi </td>
         </tr>
         <tr style="height:40px">
             <td> Ngày đặt:</td>
@@ -67,6 +71,7 @@
             <td> Ngày giao hàng:</td>
             <td style="font-weight:bold">
                 <input type="date" name="Ngaygiao" />
+                @ViewBag.THONGBAO
             </td>
         </tr>
         <tr style="height:40px">
@@ -75,6 +80,13 @@
                 <input type="Submit" value="ĐỒNG Ý ĐẶT HÀNG" />
             </td>
         </tr>
+        <tr style="height:40px">
+            <td></td>
+            <td>
+                <a href="@Url.Action("Onepay", "GioHang")"><h4 style="text-align:center;color:#bd6132">Thanh Toán Trực Tuyến</h4></a>
+            </td>
+        </tr>
+
     }
 </table>
 

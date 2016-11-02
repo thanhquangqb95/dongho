@@ -5,56 +5,71 @@
 }
 
 
-<h3> Bạn quyết định xóa quyển sách này?</h3>
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Tên Đồng Hồ
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.TenDongHo)
-        </dd>
-        <dt>
-            Giá bán:
-        </dt>
-        <dd>
-            @String.Format("{0:0,0}", Model.DonGia) VNĐ
-        </dd>
-        <dt>
-            Số Lượng Tồn:
-        </dt>
-        <dd style="width:600px; text-align:justify">
-            @Html.DisplayFor(model => model.SoLuong)
-        </dd>
-        <dt>
-            Ảnh bìa:
-        </dt>
-        <dd>
-            <img src="@Url.Content("~/DONGHO/"+  Model.hinh)" width="120px" />
-        </dd>
-        <dt>
-            Mã NCC:
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.NHACUNGCAP.TenNSX)
-        </dd>
-        <dt>
-            Mã Loại:
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LOAISP.TenLoai)
-        </dd>
-    </dl>
-</div>
-<div>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="form-actions no-color">
-            <input type="submit" value="Xóa" class="btn btn-default" /> |
-            @Html.ActionLink("TRỞ VỀ", "QLSANPHAM")
+<h3 style="text-align:center"> Bạn quyết định xóa sản phẩm này?</h3>
+<h2 style="text-align:center">Nhập Thông Tin Sản Phẩm Mới</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
         </div>
-    }
+        <div class="col-md-10">
+            <div class="col-md-8 col-sm-6">
+                <div class="img-show">
+
+                    <div>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Tên Đồng Hồ
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.TenDongHo)
+                            </dd>
+                            <dt>
+                                Giá bán:
+                            </dt>
+                            <dd>
+                                @String.Format("{0:0,0}", Model.DonGia) VNĐ
+                            </dd>
+                            <dt>
+                                Số Lượng Tồn:
+                            </dt>
+                            <dd style="width:600px; text-align:justify">
+                                @Html.DisplayFor(model => model.SoLuong)
+                            </dd>
+                            <dt>
+                                Ảnh bìa:
+                            </dt>
+                            <dd>
+                                <img src="@Url.Content("~/DONGHO/"+  Model.hinh)" width="120px" />
+                            </dd>
+                            <dt>
+                                Mã NCC:
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.NHACUNGCAP.TenNSX)
+                            </dd>
+                            <dt>
+                                Mã Loại:
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.LOAISP.TenLoai)
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Xóa" class="btn btn-default" /> |
+                                @Html.ActionLink("TRỞ VỀ", "QLSANPHAM")
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 

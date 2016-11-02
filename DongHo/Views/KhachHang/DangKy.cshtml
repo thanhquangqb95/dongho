@@ -1,6 +1,7 @@
 ﻿@model DongHo.Models.KHACHHANG
 @{
-    Layout = null;
+    ViewBag.Title = "Đăng Ký";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
 <html>
@@ -9,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Đăng Nhập</title>
+    <title>Đăng Ký</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -36,7 +37,7 @@
 <body>
 
     <!-- Top content -->
-    <div class="top-content">
+    <div class="Login">
 
         <div class="inner-bg">
             <div class="container">
@@ -49,8 +50,8 @@
                     <div class="col-sm-6 col-sm-offset-3 form-box">
                         <div class="form-top">
                             <div class="form-top-left">
-                                <h3>Màn Hình Đăng Ký</h3>
-                                <p>Nhập đầy đủ thông tin để thực hiên Giao Dịch...</p>
+                                <h3 style="color:#ffffff;text-align:center">Màn Hình Đăng Ký</h3>
+                                <p style="text-align:center">Mời bạn nhập đầy đủ thông tin đê đăng ký</p>
                             </div>
                         </div>
                         <div class="form-bottom">
@@ -66,6 +67,11 @@
                                    
                                 </div>
                                 <div class="form-group">
+                                    <label class="sr-only" for="form-password">Địa Chỉ</label>
+                                    <input type="text" name="DiaChi" placeholder="Địa Chỉ" class="form-password form-control" id="form-password">
+
+                                </div>
+                                <div class="form-group">
                                     <label class="sr-only" for="form-password">Mật Khẩu</label>
                                     <input type="password" name="password" placeholder="Mật Khẩu..." class="form-password form-control" id="form-password">
                                 </div>
@@ -74,27 +80,13 @@
                                     <input type="password" name="password2" placeholder="Nhập Lại Mật Khẩu..." class="form-password form-control" id="form-password">
                                     
                                 </div>
-                                <button type="submit" class="btn">Đăng Ký</button>
+                                <button type="submit" style="position:center" class="btn">Đăng Ký</button>
                             </form>
 
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3 social-login">
-                        <div class="social-login-buttons">
-                            <a class="btn btn-link-1 btn-link-1-facebook" href="#">
-                                <i class="fa fa-facebook"></i> Facebook
-                            </a>
-                            <a class="btn btn-link-1 btn-link-1-twitter" href="#">
-                                <i class="fa fa-twitter"></i> Twitter
-                            </a>
-                            <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
-                                <i class="fa fa-google-plus"></i> Google Plus
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
 

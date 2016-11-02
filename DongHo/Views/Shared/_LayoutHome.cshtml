@@ -2,197 +2,254 @@
 
 <html>
 <head>
+    <link rel="icon" href="~/ICON/misc_rolex.gif" type="image/gif">
+
     <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>@ViewBag.Title</title>
     @*CSS*@
-
     <link href="~/Content/boostrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/boostrap/bootstrap-theme.min.css" rel="stylesheet" />  
+    <link href="~/Content/boostrap/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="~/Content/home/style.css" rel="stylesheet" />
-
     @*icon*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     @*font*@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+   
+   
 </head>
 <body id="home">
     <div class="web">
+
         @*Top header*@
         <header>
-            <div class="col-md-12 col-sm-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 " style="text-align: center">
+
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <div class="logo col-md-12">
-                                <a href="~/Home" class="logo"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+
+                        <div class="col-xs-4 col-sm-2 col-sm-offset-0 col-md-2 col-md-offset-0">
+                            <div class="col-md-12">
+                                <a href="~/Home/Index"><img alt="" src="~/image/logo/rolex-logo.svg" class="logo"></a>
                             </div>
                         </div>
-                        <div class="col-md-10 ">
-                            <div class="col-md-12">
+                        <div class="col-xs-8 col-sm-10 col-md-10 ">
+
+                            <div class="col-xs-12 col-sm-10 col-md-12">
                                 <div class="header-top">
-                                    <div class="row">
-                                        @*<div class="col-md-3">
-                                            <ul class="option_nav">
-                                                <li class="dorpdown">
-                                                    <i class="fa fa-arrow-down" aria-hidden="true" style="color:red"></i>
-                                                    <a href="#">Tiếng Việt </a>
-                                                    <ul class="subnav">
-                                                        <li><a href="#">English</a></li>
-                                                        <li><a href="#">Tiếng Việt</a></li>
-
-                                                    </ul>
-                                                </li>
-                                                <li class="dorpdown">
-                                                    <i class="fa fa-arrow-down" aria-hidden="true" style="color:red"></i>
-                                                    <a href="#">USD</a>
-                                                    <ul class="subnav">
-                                                        <li><a href="#">USD</a></li>
-                                                        <li><a href="#">VND</a></li>
-
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>*@
-                                        <div class="col-md-4 col-md-offset-3">
-                                            <ul class="topmenu">
-                                                <li><a href="#">Thông Tin</a></li>
-                                                <li><a href="#">Tin tức</a></li>
-                                                <li><a href="#">Hỗ Trợ</a></li>
-                                            </ul>
+                                    <div class="row"> 
+                                        <div class="col-sm-5 col-sm-offset-2 col-md-5 col-md-offset-2">
+                                            <div class="top-menu">
+                                                <ul class="topmenu">
+                                                    <li><a href="#">Thông Tin</a></li>
+                                                    <li><a href="#">Tin tức</a></li>
+                                                    <li><a href="#">Hỗ Trợ</a></li>
+                                                </ul>
+                                            </div>
+                                           
                                         </div>
-                                        <div class="col-md-5">
-                                            <ul class="usermenu">
-                                                <li><a  class="fa fa-user"> @Html.ActionLink(" My Account", "KhachHang")</a></li>
-                                                <li><a class="fa fa-shopping-cart">@Html.ActionLink(" Cart", "")</a></li>
-                                            </ul>
-                                        </div>
+                                        
+                                        <div class="col-xs-12 col-sm-5 col-md-5" >
+                                                                                                                                
+                                                </div>
+                                                <div class="collapse1 navbar-collapse" id="collapse1">
+                                                    <ul class="usermenu">
+                                                        <li><a class="fa fa-user">  @Html.ActionLink("Hi!..", "KhachHang", "Home")</a>@Html.Action("TenKH", "Home")</li>
+                                                        <li><a class="fa fa-shopping-cart">@Html.ActionLink("Cart", "GioHang", "GioHang")</a>@Html.Action("GiohangPartial", "GioHang")</li>
+                                                    </ul>
+                                                </div>                                               
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="menu-nav">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <ul class="nav navbar-nav">
-                                                <li class="col-md-2">@Html.ActionLink("Đồng Hồ Mới","donghonew")</li>
-                                                <li class="col-md-2">@Html.ActionLink("Đồng Hồ Hot", "donghotot")</li>
-                                                <li class="col-md-2">@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</li>
-                                                <li class="col-md-2">@Html.ActionLink("Đồng Hồ Nữ", "SanPhamNu")</li>
-                                                <li class="col-md-2"><a><input type="text" class="search-query " placeholder="Tìm Kiếm"></a></li>
-                                            </ul>
-                                        </div>
+
+                            <div class="col-xs-12 col-sm-2 col-md-12">
+
+                                <nav class="navbar " role="navigation">
+
+                                    <div class="navbar-header navbar-right">
+
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
 
                                     </div>
 
-                                </div>
+                                    <div class="collapse navbar-collapse" id="collapse">
+
+                                        <ul class="nav navbar-nav">
+
+                                            <li class="active col-md-2">@Html.ActionLink("Đồng Hồ Mới", "donghonew", "Home")</li>
+                                            <li class="col-md-2">@Html.ActionLink("Đồng Hồ Hot", "donghotot", "Home")</li>
+                                            <li  class="col-md-2">@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam", "Home")</li>
+                                            <li  class="col-md-2">@Html.ActionLink("Đồng Hồ Nữ", "SanPhamNu", "Home")</li>
+                                            <li  class="col-md-2">
+                                                @using (Html.BeginForm("TimKiem", "Home", FormMethod.Post))
+                                                    {
+                                                    <div class="input-group">
+                                                        <input type="text" name="TimKiem" style="color:#006039" class="form-control" placeholder="Tìm Kiếm ..">
+                                                        <span class="input-group-btn">
+                                                            <button type="submit" name="btnTimKiem" style="width:180%;height:118%;margin-bottom:5px" id="search-btn" class="btn btn-flat">
+                                                                <i class="fa fa-search"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                    }
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </nav>
+
                             </div>
 
                         </div>
-                    </div>
 
+                    </div>
                 </div>
+
             </div>
-            
         </header>
+
         <div class="clearfix"></div>
+
         <div class="NoiDung">
-            
-                @RenderBody()
-         
-           
-        </div>
+            @RenderBody()               
+         </div>  
+              
+       <footer class="footer-bottom">
+                <div class="container">
 
-        <footer class="footer-bottom">
-            <div class="container">
+                    <div class="col-md-12">
+                        @*<iframe src="https://www.google.com/maps/d/embed?mid=1QxUNSnxZLAi9Gx_mMcxKOY8CqJk" width="100%" height="500px"></iframe>*@
 
-                <div class="col-md-12 col-sm-12">
-                    <a href="~/Home" class="logo-bottom col-md-12"><img alt="" src="~/image/logo/rolex-logo.svg" ></a>
-                </div>
+                    </div>
 
-                <div class="share-logo">
-                    <div class="row ">
-                        <div class="col-md-12 col-sm-12 text-center">
-                            <div class="share-logo-link ">
-                                <!-- social media link -->
-                                <a target="_blank" href="https://www.facebook.com/rolex/?fref=ts/"><i class="fa fa-facebook fa-2x" style="color:blue"></i></a>
-                                <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-2x" style="color:blue"></i></a>
-                                <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus fa-2x" style="color:red"></i></a>
-                                <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble fa-2x" style="color:red"></i></a>
-                                <a target="_blank" href="https://www.youtube.com/user/WorldOfRolex"><i class="fa fa-youtube fa-2x" style="color:red"></i></a>
-                                <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x" style="color:red"></i></a>
-                                <!-- end social media link -->
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <a href="~/Home/Index" class="logo-bottom col-md-12"><img alt="" src="~/image/logo/rolex-logo.svg"></a>
+                    </div>
+
+                    <div class="share-logo">
+                        <div class="row ">
+                            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                                <div class="share-logo-link ">
+                                    <!-- social media link -->
+                                    <a target="_blank" href="https://www.facebook.com/rolex/?fref=ts/"><i class="fa fa-facebook fa-2x" style="color:blue"></i></a>
+                                    <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-2x" style="color:blue"></i></a>
+                                    <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus fa-2x" style="color:red"></i></a>
+                                    <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble fa-2x" style="color:red"></i></a>
+                                    <a target="_blank" href="https://www.youtube.com/user/WorldOfRolex"><i class="fa fa-youtube fa-2x" style="color:red"></i></a>
+                                    <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x" style="color:red"></i></a>
+                                    <!-- end social media link -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                   
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="col-xs-6 col-sm-4 col-md-4">
+                            <div class="title-footer btn"> Thông Tin Liên Hệ </div>
+                            <div class="text">
 
-                <div class="footer-column">
-                    <div class="col-md-2 col-sm-12">
-                        <div class="title-footer btn"> Our Store </div>
-                        <div class="textwidget">
-                            <ul class="menu-footer">
-                                <li><a href="#">New York</a></li>
-                                <li><a href="#">London SF</a></li>
-                                <li><a href="#">Cockfosters BP</a></li>
-                                <li><a href="#">Los Angeles</a></li>
-                                <li><a href="#">Chicago</a></li>
-                                <li><a href="#">Las Vegas</a></li>
-                            </ul>
+                                <p><span class="fa fa-map-marker"><strong> Add:</strong><a> 285 Đinh Bộ Lĩnh -P.24 - Q.Bình Thạnh-TPHCM</a></span></p> 
+                                <p><span class="fa fa-phone"><strong> Phone:</strong><a hel="tel:19005632">Liên Hệ:19005632</a></span></p>
+                                <p><span class="fa fa-fax"><strong> Fax:</strong><a>Fax:19005632</a></span></p>
+                                <p><span class="fa fa-envelope"><strong> Mail:</strong><a href="mailto:thanhquangqb95@gmail.com" target="_top"> thanhquangqb95@gmail.com</a></span></p>
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="title-footer btn">ĐỒng Hồ Rolex</div>
-                        <div class="textwidget">
+
+                        <div class="col-xs-6 col-sm-4 col-md-4">
+                            <div class="fb-page"
+                                 data-href="https://www.facebook.com/DHRolex"
+                                 data-width="340"
+                                 data-hide-cover="false"
+                                 data-show-facepile="true"></div>
+                        </div>
+                        @*<div class="col-md-2">
+                            <div class="title-footer btn">ĐỒng Hồ Rolex</div>
+                            <div class="textwidget">
                             <ul class="menu-footer">
-                                <li><a href="#">Đồng Hồ Nam</a></li>
-                                <li><a href="#">Đồng Hồ Nữ</a></li>
-                                <li><a href="#">Đồng Hồ Hot</a></li>
-                                <li><a href="#">Đồng Hồ 2016</a></li>
-                                <li><a href="#">Phiên Bản Đặt Biệt</a></li>
-                              
+                            <li><a href="#">Đồng Hồ Nam</a></li>
+                            <li><a href="#">Đồng Hồ Nữ</a></li>
+                            <li><a href="#">Đồng Hồ Hot</a></li>
+                            <li><a href="#">Đồng Hồ 2016</a></li>
+                            <li><a href="#">Phiên Bản Đặt Biệt</a></li>
                             </ul>
-                        </div>  
-                    </div>
-                    <div class="col-md-2 btn">
-                        <div class="title-footer">
+                            </div>
+                            </div>
+                            <div class="col-md-2 btn">
+                            <div class="title-footer">
                             Bộ Sưu Tập
-                        </div>
-                    </div>
-                    <div class="col-md-2 btn">
-                        <div class="title-footer">
+                            </div>
+                            </div>
+                            <div class="col-md-2 btn">
+                            <div class="title-footer">
                             Dịch Vụ
-                        </div>
-                    </div>
-                    <div class="col-md-4 btn">
-                        <div class="title-footer">
+                            </div>
+                            </div>
+                            <div class="col-md-4 btn">
+                            <div class="title-footer">
                             THế Giới Rolex
-                        </div>
+                            </div>
+                            </div>
+                            </div
+                            <div class="col-md-8">
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1QxUNSnxZLAi9Gx_mMcxKOY8CqJk" width="100%" height="350"></iframe>
+                            </div>>*@
                     </div>
-                </div>
-            </div>
-            <div class="footer-link">
 
-                <div class="col-md-12 footer-end">
-                    <hr class="hr-footer" width="80%" align="center" />
-                    <p>&copy;2016  Một sản phẩm của Quảng và Thanh.<a href="http://facebook.com/lethanhquangqb1995" target="_blank">T&Q</a></p>
-                </div>
-                <div class="col-md-4">
+                    <div class="footer-link">
+
+                        <div class="col-md-12 footer-end">
+                            <hr class="hr-footer" width="80%" align="center" />
+                            <p>&copy;2016  Một sản phẩm của Quảng và Thanh.<a href="http://facebook.com/lethanhquangqb1995" target="_blank">T&Q</a></p>
+                        </div>
+                        
+                    </div>
 
                 </div>
-            </div>
-        </footer>
-    </div>
+            </footer>
+        </div>
+    
 
     @*javascripts*@
     <script>
-$(document).ready(function(){
-    $("#myBtn").click(function () {
-        $("#myModal").modal();
-    });
-});
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+        });
     </script>
     <script src="~/scripts/bootstrap.min.js"></script>
     <script src="~/scripts/jquery-3.1.1.min.js"></script>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=254667978231030";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=473445339340545";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+ 
+    Kết thúc cuộc trò chuyện
 
 </body>
 </html>

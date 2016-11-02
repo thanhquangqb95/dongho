@@ -1,0 +1,61 @@
+﻿@using DongHo.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DONGHO>
+@{
+    ViewBag.Title = "Danh Sách Tìm Kiếm";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<div class="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a class="fa fa-home"> @Html.ActionLink(" Trang Chủ", "Index") </a>
+            </li>
+            <li>
+                <a>@Html.ActionLink("Tìm Kiếm", "TimKiem")</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="show">
+    <div class="container">
+        <div class="text-link">
+            <a>@Html.ActionLink("Danh Sách Tìm Kiếm Được", "TimKiem")</a>
+            <a style="color:#f63f0e">@ViewBag.ThongBao1</a>
+        </div>
+        <div class="row" style="text-align:center">
+            @foreach (var dongho in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="img-show">
+
+                        <div class="thumbnail">
+                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
+                                <img src=" ~/DongHo/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
+                                <p><h5 style="color:#0005ed">@dongho.TenDongHo</h5></p>
+                            </a>
+                            <p style="color:#a37e2c">Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
+                            <div id="DatMua" class="fc-button">
+                                <a href="@Url.Action("ThemGiohang", "GioHang",new {@iMasach = dongho.MaDongHo,@strURL= Request.Url.ToString()})" class="list-group-item" style="text-align:center;background-color:#006039"><h5 style="color:#a37e2c;height:10px;text-align:center">Đặt Mua</h5></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+            <div class="MenuTrang">
+                @Html.PagedListPager(Model, page => Url.Action("TimKiem", new { page = page, @tendn1= ViewBag.tendn }))
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    .Vien {
+        border-style: dashed;
+        border-color: red;
+    }
+</style>
+
+

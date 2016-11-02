@@ -44,8 +44,8 @@
       <Column Name="GioiTinh" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Association Name="DONGHO_CTDDH" Member="CTDDHs" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTDDH" />
       <Association Name="DONGHO_CTKM" Member="CTKMs" ThisKey="MaDongHo" OtherKey="MaDongHo" Type="CTKM" />
-      <Association Name="NHACUNGCAP_DONGHO" Member="NHACUNGCAP" ThisKey="MaNCC" OtherKey="MaNCC" Type="NHACUNGCAP" IsForeignKey="true" />
       <Association Name="LOAISP_DONGHO" Member="LOAISP" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAISP" IsForeignKey="true" />
+      <Association Name="NHACUNGCAP_DONGHO" Member="NHACUNGCAP" ThisKey="MaNCC" OtherKey="MaNCC" Type="NHACUNGCAP" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
@@ -54,7 +54,15 @@
       <Column Name="TenKH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(100)" CanBeNull="true" />
       <Column Name="MatKhau" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="KHACHHANG_DONDATHANG" Member="DONDATHANGs" ThisKey="MaKH" OtherKey="MaKH" Type="DONDATHANG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAISP" Member="LOAISPs">
+    <Type Name="LOAISP">
+      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAISP_DONGHO" Member="DONGHOs" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO" />
     </Type>
   </Table>
   <Table Name="dbo.KHUYENMAI" Member="KHUYENMAIs">
@@ -62,15 +70,6 @@
       <Column Name="MaKM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenKM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="KHUYENMAI_CTKM" Member="CTKMs" ThisKey="MaKM" OtherKey="MaKM" Type="CTKM" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PhieuGiaoHang" Member="PhieuGiaoHangs">
-    <Type Name="PhieuGiaoHang">
-      <Column Name="MaPGH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TongGia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="CTDDH_PhieuGiaoHang" Member="CTDDH" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="CTDDH" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.NHACUNGCAP" Member="NHACUNGCAPs">
@@ -81,11 +80,13 @@
       <Association Name="NHACUNGCAP_DONGHO" Member="DONGHOs" ThisKey="MaNCC" OtherKey="MaNCC" Type="DONGHO" />
     </Type>
   </Table>
-  <Table Name="dbo.LOAISP" Member="LOAISPs">
-    <Type Name="LOAISP">
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="LOAISP_DONGHO" Member="DONGHOs" ThisKey="MaLoai" OtherKey="MaLoai" Type="DONGHO" />
+  <Table Name="dbo.PhieuGiaoHang" Member="PhieuGiaoHangs">
+    <Type Name="PhieuGiaoHang">
+      <Column Name="MaPGH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TongGia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MaDongHo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CTDDH_PhieuGiaoHang" Member="CTDDH" ThisKey="MaDongHo,MaDDH" OtherKey="MaDongHo,MaDDH" Type="CTDDH" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TaiKhoan" Member="TaiKhoans">

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Rolex";
+    ViewBag.Title = "Trang Chủ";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 <head>
@@ -15,30 +15,6 @@
     <script src="~/scripts/jquery.nivo.slider.pack.js"></script>
 </head>
 <body>
-    @*<section class="blank">
-        <div class="rlx-sticky-header__inner">
-            <div id="slider" class="nivoSlider">
-                <img src="~/HinhNivo/m178341_0010_datejust-31_0001_2550x1427.jpg" />
-                <img src="~/HinhNivo/yacht-master-40_m116622-0003_2550x1427.jpg" />
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(window).load(function(){
-            $('#slider').nivoSlider();
-            });
-        </script>
-        <script type="text/javascript">
-        $(window).load(function () {
-            $('#slider').nivoSlider({
-                controlNav: false,
-                nextText: '',
-                prevText: '',
-
-
-            });
-        });
-        </script>
-    </section>*@
     <div class="home-slider">
     <div class="">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -80,16 +56,18 @@
     <div class="QC-1">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" >
+                <div class="col-xs-12 col-sm-4 col-md-4" >
                 <a  href="@Url.Action("donghonew","Home")">
-                    <img src="~/image/baner/baner1.png" alt="New Rolex 2016"/>
+                    <img src="~/image/baner/d0e7310d4f8230dc4e974e964cf26d2a (Copy).jpg" />
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
+                    <img src="~/image/baner/lich-su-dong-ho-Daniel-Wellington-dw (Copy).jpg" />
                 </div>
                 <div class="col-md-4">
-                    <img src="~/image/baner/baner1.png" alt="New Rolex 2016" />
+
+                   
+                    <img src="~/image/baner/232-a2.jpg" />
                 </div>
             </div>
         </div>
@@ -102,16 +80,17 @@
             <div class="row" style="text-align:center">
                 @foreach (var dongho in Model)
             {
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-xs-6 col-sm-4 col-md-3 ">
                         <div class="img-show">
                             <div class="thumbnail">
                                 <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
-                                    <img src=" ~/DongHoNam/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
-                                    <p>@dongho.TenDongHo</p>
+                                    <img src="~/DongHo/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
+                                    <p><h5 style="color:#0005ed">@dongho.TenDongHo</h5></p>
                                 </a>
-                                <p>Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
-                                <button type="button" class="btn btn-default">@Html.ActionLink("Xem Hàng", "Details", new { id = dongho.MaDongHo })</button>
-                                <button type="button" class="btn btn-default" href="~/GioHang/DatHang.cshtml">Mua Hàng</button>
+                                <p style="color:#a37e2c">Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
+                                <div id="DatMua" class="fc-button">
+                                    <a href="@Url.Action("ThemGiohang", "GioHang",new {@iMasach = dongho.MaDongHo,@strURL= Request.Url.ToString()})" class="list-group-item" style="text-align:center;background-color:#006039"><h5 style="color:#a37e2c;height:10px;text-align:center">Đặt Mua</h5></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,10 +99,11 @@
         </div>
     </div>
    @RenderPage("~/Views/Home/donghotot.cshtml");
-    <div class="video video-responsive">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1anL0snlDQ_aLVp-f8h_90XzUpQw" width="100%" height="480" frameborder="0" style="border:0 " allowfullscreen></iframe>
+    @*<div class="video video-responsive">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6PXvdOlNgtI?autoplay=1" frameborder="0" allowfullscreen ></iframe>
         
-    </div>
+    </div>*@
   
        
 </body>

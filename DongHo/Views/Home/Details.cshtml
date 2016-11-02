@@ -3,40 +3,74 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/fonts.css" rel="stylesheet" />
+    <link href="~/Content/screen.css" rel="stylesheet" />
+    <link href="~/Content/TrangChu.css" rel="stylesheet" />
+    @*add nivoslider*@
+    <link href="~/Contenr/nivo-slider.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/jquery.nivo.slider.js"></script>
+    <script src="~/scripts/jquery.nivo.slider.pack.js"></script>
+</head>
+<body>
+    <div style="text-align:center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <h1 style="font-weight:bold;color:#a37e2c;text-align:center">Chi Tiết Sản Phẩm</h1>
 
-<div class="breadcrumb">
-    <div class="container">
-        <ul class="breadcrumb">
-            <li>
-                <a class="fa fa-home"> @Html.ActionLink(" Trang Chủ", "Index") </a>
-            </li>
-            <li>
-                <a>@Html.ActionLink("Đồng Hồ Nam", "SanPhamNam")</a>
-            </li>
-            <li>
-                <a>@Model.TenDongHo</a>
-            </li>
-        </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-md-offset-2">
+                        <div style="float:right;border-left:dotted 1px;border-color:azure">
+                            <h4 style="font-weight:bold;color:#a37e2c;text-align:center"> @Model.Ten  </h4>
+                            <div class="col-xs-12 col-sm-12 col-md-12"><img src="~/DONGHO/@Model.Hinh1" /></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div style="float:left;padding:10px">
+                            <h4 style="font-weight:bold;color:#a37e2c;text-align:center">Thông Tin Sản Phẩm</h4>
+                            <table id="" class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr style="color:#074209"><td width="150" class="title"><b>Giá Sản Phẩm</b></td><td><b>@Model.Dongia</b> </td></tr>
+                                    <tr style="color:#074209"><td width="150" class="title"><b>Loại Sản Phẩm</b></td><td><b>@Model.TenLoai1</b></td></tr>
+                                    <tr style="color:#074209"><td width="150" class="title"><b>Nhà Cung Cấp</b></td><td><b>@Model.TenNCC1</b></td></tr>
+                                    <tr style="color:#074209"><td width="150" class="title"><b>Địa Chỉ Nhà Cung Cấp</b></td><td><b>@Model.DiaCHi1</b></td></tr>
+                                </tbody>
+                            </table>
+
+                            <div id="DatMua" class="fc-button">
+                                <a href="@Url.Action("ThemGiohang", "GioHang",new {@iMasach = @Model.MaDH1,@strURL= Request.Url.ToString()})" class="list-group-item"><h4 style="color:#a37e2c">Đặt Mua</h4></a>
+                            </div>
+                        </div>
+                        @*<div class="fb-comments" data-href="https://developers.facebook.com/apps/1817276228529009/dashboard/" data-numposts="5"></div>*@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
+    <div style="text-align:center;font-size:14px">
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 fb-comments" data-href="https://www.facebook.com/groups/13DTHC06Hutech/?fref=ts" data-numposts="5">
+                    </div>
+                </div>
 
-<div class="show-chitiet">
-    <div class="container">
-
-        <div class="text-link">
-            <a>@Model.TenDongHo</a>
-        </div>
-        <div class="col-md-6">
-            <img src="~/DONGHO/@Model.hinh" alt="@Model.TenDongHo" style="width:100%" />
-        </div>
-        <div class="col-md-6">
-            <h4 style="font-weight:bold;color:red">
-                Đồng Hồ: @Model.TenDongHo
-            </h4>
-            <p>MSSP:@Model.MaDongHo</p>
-            <h5>Giá: @Model.DonGia</h5>
-            <h5>Tình Trạng: Còn Hàng</h5>
+            </div>
         </div>
     </div>
-</div>
+    <style>
+        .Vien {
+            border-style: dashed;
+            border-color: red;
+        }
+    </style>
+
+</body>

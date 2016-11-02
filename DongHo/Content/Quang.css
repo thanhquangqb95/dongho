@@ -153,3 +153,17 @@ span {
     color: #428bca;
     background-color:#eee;
 }
+#chinhgiua{
+    text-align:center;
+}
+.hinhsanpham{
+    height:50%;
+    width:60%;
+}
+#DatMua{
+    height:10px;
+    width:100px;
+    float:left;
+   color:#e6560d;
+   background-color:#e6560d;
+}

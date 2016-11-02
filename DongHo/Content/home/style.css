@@ -11,13 +11,68 @@ body {
     min-width: 718px;
    
 }
+/* Small devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) and (min-width: 320px){ 
+    .top-menu{
+        display:none;
+    }
+   .navbar-nav > li > a {
+    padding: 5px 0px;
+    font-size: 20px!important;
+    text-transform: uppercase;
+    display: block;
+    color: #006039;
+    font-weight: bold;
+   
+}
+}
 
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width: 992px) and (min-width: 769px) { 
+   
+   
+      img.logo {
+        width: 100%!important;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 993px) { 
+      img.logo{
+        width: 100%!important;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+}
 .container {
-    width: 95%;
+    width: 100%;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
+}
+.navbar-toggle{    
+    border-color:#006039!important;
+}
+.icon-bar{
+    background-color: #006039!important;
+
+}
+.nav{
+    color:#006039!important;   
+       font-size: 13px;
+            text-transform: uppercase;
+            display: block;
+          
+            line-height: 16px;
+}
+.navbar{
+    margin-bottom:0px !important;
+    
 }
 
 #home {
@@ -30,6 +85,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         background-attachment: fixed;
         position: fixed;
         z-index: 100;
+        padding-top:10px;
         display: block;
         width: 100%;
         top: 0px;
@@ -53,12 +109,7 @@ header {
     height:500px;
 }
 
-    .logo > img {
-        width: 100%;
-        position: relative;
-        padding-bottom: 10px;
-    }
-
+  
 .header-top {
     float: right;
     width: 100%;
@@ -126,10 +177,13 @@ header {
 
 /*top menu*/
 .topmenu {
-    float: right;
+   
     width: auto;
-    padding-top: 20px;
+    
     padding-left: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
 }
 
     .topmenu li {
@@ -166,7 +220,7 @@ header {
 
 .usermenu {
     float: right;
-    padding-top: 10px;
+   
 }
 
     .usermenu ul {
@@ -231,10 +285,16 @@ header {
         display: block;
     }
 .navbar-nav{
-    padding-top:10px;
+   
 }
 .navbar-nav > li > a {
     padding: 5px 0px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    color: #006039;
+    font-weight: bold;
+   
 }
 
 
@@ -470,4 +530,7 @@ footer {
 
     position:absolute;
 
+}
+.gio_hang{
+    padding-bottom:20px;
 }

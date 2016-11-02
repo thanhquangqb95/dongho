@@ -1,0 +1,231 @@
+﻿@using DongHo.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DONGHO>
+
+@{
+    ViewBag.Title = "TimKiem1";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<head>
+    <link rel="icon" href="~/ICON/misc_rolex.gif" type="image/gif">
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>@ViewBag.Title</title>
+    @*CSS*@
+    <link href="~/Content/boostrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/boostrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/home/style.css" rel="stylesheet" />
+    @*icon*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <Link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    @*font*@
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/Content/AdminLTE/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/icheck/_all-skins.min.css" rel="stylesheet" />
+    <link href="~/Content/home/Danhmuc.css" rel="stylesheet" />
+    <link href="~/Content/home/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab" role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#ctKhachHang" aria-controls="home" role="tab" data-toggle="tab">Thông Tin Khách Hàng</a></li>
+
+                    </ul>
+                    <!-- Tab panes content goes here-->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade-in active" id="ctKhachHang">
+                            <p>@Html.ActionLink("Thêm Sản Phẩm Mới", "Create")</p>
+                            @using (Html.BeginForm("TimKiem1", "QuanLy"))
+                            {
+                                <div class="input-group">
+                                    <input type="text" name="TimKiem" style="color:#006039" class="form-control" placeholder="Tìm Kiếm ..">
+                                    <span class="input-group-btn">
+                                        <button type="submit" name="btnTimKiem" style="width:180%;height:118%;margin-bottom:5px" id="search-btn" class="btn btn-flat">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            }
+                            <div class="table">
+                                <table class="listing" cellpadding="0" cellspacing="0">
+                                    <tr style="text-align:center; font-weight:bold">
+                                        <td>
+                                            Hình Ảnh Sản Phẩm
+                                        </td>
+                                        <td>Tên Sản Phẩm</td>
+                                        <td>Giá Sản Phẩm</td>
+                                        <td>Số Lượng Còn</td>
+                                        <td>Mã Nhà Cung cấp Sản Phẩm</td>
+                                        <td>Lựa CHọn</td>
+                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr style="text-align:center">
+                                            <th><img class="hinhsanpham" src="~/DONGHO/@item.hinh" /></th>
+                                            <th>@item.TenDongHo</th>
+                                            <th>@item.DonGia</th>
+                                            <th>@item.SoLuong</th>
+                                            <th>@item.MaNCC</th>
+                                            <th>
+                                                <div id="DatMua">
+                                                    @Html.ActionLink("Sửa", "SuaSanPham", new { id = item.MaDongHo })
+                                                </div>
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <div id="DatMua">
+                                                    @Html.ActionLink("Xoa", "Xoa", new { id = item.MaDongHo })
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+                            <div class="MenuTrang">
+                                @Html.PagedListPager(Model, page => Url.Action("TimKiem1", new { page = page, @tensp = ViewBag.tensp }))
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .bt {
+        padding-top: 15px;
+        margin: auto;
+    }
+
+    div.table {
+        float: left;
+        position: relative;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    table.listing {
+        border-bottom: 1px solid #222d32;
+        width: 100%;
+        padding: 0;
+        margin: auto;
+        border: 1px solid #222d32;
+    }
+
+        table.listing th {
+            border-top: 0 !important;
+            margin: auto;
+        }
+
+            table.listing th.full {
+                border-left: 0;
+                border-right: 0 !important;
+                text-align: left;
+            }
+
+    div.table img.left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    div.table img.right {
+        position: absolute;
+        top: 0;
+        right: 1px;
+    }
+    /* table styles */
+    table.listing td,
+    table.listing th {
+        margin: auto;
+        border: 1px solid #201b3c;
+        text-align: center;
+    }
+
+    table.listing th {
+        margin: auto;
+        background: #fff;
+        color: #000;
+        padding: 5px;
+    }
+
+    table.listing td {
+        background: #222d32;
+        color: #fff;
+        padding: 3px 5px;
+    }
+
+    table.listing .bg td {
+        background: #ff00dc;
+    }
+
+    table.listing .white td {
+        background: #000;
+    }
+
+    table.listing .first {
+        border-left: 0px solid #ff00dc;
+        text-align: left;
+    }
+
+    table.listing .last {
+        border-right: 0px solid #ff00dc;
+    }
+
+    table.listing th.first {
+        background: #ff00dc url(../img/bg-th-left.gif) no-repeat left top;
+        border-left: 0;
+    }
+
+    table.listing th.last {
+        background: #ff00dc url(../img/bg-th-right.gif) no-repeat right top;
+        border-right: 0;
+    }
+
+    table.listing .style1 {
+        font-weight: bold;
+        color: #FF7A00;
+    }
+
+    table.listing .style2 {
+        font-weight: bold;
+        padding-left: 16px;
+    }
+
+    table.listing .style3 {
+        padding-left: 25px;
+    }
+
+    table.listing .style4 {
+        padding-left: 35px;
+    }
+
+    table.form .last {
+        padding: 1px 0 1px 5px;
+        text-align: left;
+    }
+
+    table.form th,
+    table.form td {
+        padding-left: 10px;
+    }
+
+    table.form input.text {
+        width: 262px;
+    }
+</style>
+
+
+
+
+
+

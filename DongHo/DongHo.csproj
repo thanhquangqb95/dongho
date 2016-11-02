@@ -126,109 +126,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AdminLTE.css" />
+    <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\AdminLTE\AdminLTE.css" />
     <Content Include="Content\AdminLTE\AdminLTE.min.css" />
-    <Content Include="Content\icheck\blue.css" />
+    <Content Include="Content\bar.css" />
     <Content Include="Content\boostrap\bootstrap-theme.css" />
     <Content Include="Content\boostrap\bootstrap-theme.min.css" />
     <Content Include="Content\boostrap\bootstrap.css" />
     <Content Include="Content\boostrap\bootstrap.min.css" />
-    <Content Include="Content\home\Danhmuc.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Danhmuc.css" />
+    <Content Include="Content\dark.css" />
+    <Content Include="Content\default.css" />
+    <Content Include="Content\flexslider.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\form-elements.css" />
+    <Content Include="Content\home\Danhmuc.css" />
+    <Content Include="Content\home\Quang.css" />
+    <Content Include="Content\home\Site.css" />
+    <Content Include="Content\home\style.css" />
+    <Content Include="Content\icheck\blue.css" />
     <Content Include="Content\icheck\_all-skins.css" />
     <Content Include="Content\icheck\_all-skins.min.css" />
     <Content Include="Content\ionic\ionicons.css" />
     <Content Include="Content\ionic\ionicons.min.css" />
     <Content Include="Content\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\light.css" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\home\Quang.css" />
-    <Content Include="Content\home\Site.css" />
-    <Content Include="Content\home\style.css" />
-    <Content Include="DongHoNam\N10.jpg" />
-    <Content Include="DongHoNam\N11.jpg" />
-    <Content Include="DongHoNam\N12.jpg" />
-    <Content Include="DongHoNam\N13.jpg" />
-    <Content Include="DongHoNam\N14.jpg" />
-    <Content Include="DongHoNam\N16.jpg" />
-    <Content Include="DongHoNam\N17.jpg" />
-    <Content Include="DongHoNam\N18.jpg" />
-    <Content Include="DongHoNam\N19.jpg" />
-    <Content Include="DongHoNam\N2.jpg" />
-    <Content Include="DongHoNam\N20.jpg" />
-    <Content Include="DongHoNam\N21.jpg" />
-    <Content Include="DongHoNam\N22.jpg" />
-    <Content Include="DongHoNam\N23.jpg" />
-    <Content Include="DongHoNam\N24.jpg" />
-    <Content Include="DongHoNam\N25.jpg" />
-    <Content Include="DongHoNam\N26.jpg" />
-    <Content Include="DongHoNam\N27.jpg" />
-    <Content Include="DongHoNam\N28.jpg" />
-    <Content Include="DongHoNam\N29.jpg" />
-    <Content Include="DongHoNam\N3.jpg" />
-    <Content Include="DongHoNam\N30.jpg" />
-    <Content Include="DongHoNam\N31.jpg" />
-    <Content Include="DongHoNam\N32.jpg" />
-    <Content Include="DongHoNam\N33.jpg" />
-    <Content Include="DongHoNam\N34.jpg" />
-    <Content Include="DongHoNam\N35.jpg" />
-    <Content Include="DongHoNam\N4.jpg" />
-    <Content Include="DongHoNam\N5.jpg" />
-    <Content Include="DongHoNam\N6.jpg" />
-    <Content Include="DongHoNam\N7.jpg" />
-    <Content Include="DongHoNam\N8.jpg" />
-    <Content Include="DongHoNam\N9.jpg" />
-    <Content Include="DongHoNam\W1.jpg" />
-    <Content Include="DongHoNam\W10.jpg" />
-    <Content Include="DongHoNam\W11.jpg" />
-    <Content Include="DongHoNam\W12.jpg" />
-    <Content Include="DongHoNam\W13.jpg" />
-    <Content Include="DongHoNam\W14.jpg" />
-    <Content Include="DongHoNam\W15.jpg" />
-    <Content Include="DongHoNam\W16.jpg" />
-    <Content Include="DongHoNam\W17.jpg" />
-    <Content Include="DongHoNam\W18.jpg" />
-    <Content Include="DongHoNam\W2.jpg" />
-    <Content Include="DongHoNam\W20.jpg" />
-    <Content Include="DongHoNam\W21.jpg" />
-    <Content Include="DongHoNam\W22.jpg" />
-    <Content Include="DongHoNam\W23.jpg" />
-    <Content Include="DongHoNam\W24.jpg" />
-    <Content Include="DongHoNam\W25.jpg" />
-    <Content Include="DongHoNam\W26.jpg" />
-    <Content Include="DongHoNam\W27.jpg" />
-    <Content Include="DongHoNam\W3.jpg" />
-    <Content Include="DongHoNam\W4.jpg" />
-    <Content Include="DongHoNam\W5.jpg" />
-    <Content Include="DongHoNam\W6.jpg" />
-    <Content Include="DongHoNam\W7.jpg" />
-    <Content Include="DongHoNam\W8.jpg" />
-    <Content Include="DongHoNam\W9.jpg" />
-    <Content Include="DongHoNu\W1.jpg" />
-    <Content Include="DongHoNu\W10.jpg" />
-    <Content Include="DongHoNu\W11.jpg" />
-    <Content Include="DongHoNu\W12.jpg" />
-    <Content Include="DongHoNu\W13.jpg" />
-    <Content Include="DongHoNu\W15.jpg" />
-    <Content Include="DongHoNu\W16.jpg" />
-    <Content Include="DongHoNu\W17.jpg" />
-    <Content Include="DongHoNu\W18.jpg" />
-    <Content Include="DongHoNu\W2.jpg" />
-    <Content Include="DongHoNu\W20.jpg" />
-    <Content Include="DongHoNu\W21.jpg" />
-    <Content Include="DongHoNu\W22.jpg" />
-    <Content Include="DongHoNu\W23.jpg" />
-    <Content Include="DongHoNu\W24.jpg" />
-    <Content Include="DongHoNu\W25.jpg" />
-    <Content Include="DongHoNu\W26.jpg" />
-    <Content Include="DongHoNu\W27.jpg" />
-    <Content Include="DongHoNu\W3.jpg" />
-    <Content Include="DongHoNu\W4.jpg" />
-    <Content Include="DongHoNu\W5.jpg" />
-    <Content Include="DongHoNu\W6.jpg" />
-    <Content Include="DongHoNu\W7.jpg" />
-    <Content Include="DongHoNu\W8.jpg" />
-    <Content Include="DongHoNu\W9.jpg" />
-    <Content Include="DONGHO\A1.jpg" />
+    <Content Include="Content\Quang.css" />
+    <Content Include="Content\sequence-looptheme.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
     <Content Include="DONGHO\N1.png" />
     <Content Include="DONGHO\N10.jpg" />
     <Content Include="DONGHO\N11.jpg" />
@@ -291,37 +224,35 @@
     <Content Include="fonts\fontello.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="HinhNivo\m178341_0010_datejust-31_0001_2550x1427.jpg" />
-    <Content Include="HinhNivo\yacht-master-40_m116622-0003_2550x1427.jpg" />
-    <Content Include="image\baner\baner1.png" />
-    <Content Include="image\baner\bg1.png" />
+    <Content Include="ICON\giohang.gif" />
+    <Content Include="ICON\misc_rolex.gif" />
+    <Content Include="image\baner\232-a2.jpg" />
     <Content Include="image\baner\bia1.jpg" />
     <Content Include="image\baner\Bia2.jpg" />
-    <Content Include="image\baner\slide.jpg" />
-    <Content Include="image\baner\slide2.jpg" />
-    <Content Include="image\baner\slide3.jpg" />
-    <Content Include="image\baner\slide4.jpg" />
-    <Content Include="image\baner.01.jpg" />
-    <Content Include="image\book_pendant_watch_black_and_white_67427_2048x1152.jpg" />
-    <Content Include="image\dongho\DH1.2.jpg" />
-    <Content Include="image\dongho\DH1.jpg" />
-    <Content Include="image\dongho\DH2.jpg" />
-    <Content Include="image\dongho\DH3.jpg" />
-    <Content Include="image\dongho\DH4.jpg" />
-    <Content Include="image\dongho\DH5.2.jpg" />
-    <Content Include="image\dongho\DH5.jpg" />
-    <Content Include="image\dongho\DH6.2.jpg" />
+    <Content Include="image\baner\d0e7310d4f8230dc4e974e964cf26d2a %28Copy%29.jpg" />
+    <Content Include="image\baner\lich-su-dong-ho-Daniel-Wellington-dw %28Copy%29.jpg" />
     <Content Include="image\giohang.gif" />
-    <Content Include="image\logo\rolex-logo-text.png" />
     <Content Include="image\logo\rolex-logo.svg" />
-    <Content Include="image\logo\rolex-text.png" />
+    <Content Include="QuangCao\logorolex.png" />
     <Content Include="scripts\admin.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\app.min.js" />
     <Content Include="scripts\demo.js" />
     <Content Include="scripts\fastclick.min.js" />
     <Content Include="scripts\icheck.min.js" />
+    <Content Include="Models\DONGHO.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DONGHO.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\donghommvc.pubxml" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery.carouFredSel-6.2.1-packed.js" />
+    <Content Include="scripts\jquery.easing.1.3.js" />
+    <Content Include="scripts\jquery.elevatezoom.js" />
+    <Content Include="scripts\jquery.flexslider.js" />
     <Content Include="scripts\jquery.nivo.slider.js" />
     <Content Include="scripts\jquery.nivo.slider.pack.js" />
     <Content Include="Content\nivo-slider.css" />
@@ -333,17 +264,17 @@
     <Content Include="fonts\fontello.eot" />
     <Content Include="fonts\fontello.ttf" />
     <Content Include="fonts\fontello.woff" />
-    <Content Include="Content\boostrap\bootstrap-theme.css.map" />
-    <Content Include="Content\boostrap\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
     <Content Include="scripts\custom.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\boostrap\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\boostrap\bootstrap-theme.css.map" />
     <Content Include="Content\boostrap\bootstrap-theme.min.css.map" />
-    <Content Include="Models\DONGHO.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DONGHO.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Content\boostrap\bootstrap.css.map" />
+    <Content Include="Content\boostrap\bootstrap.min.css.map" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
     <None Include="scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery-3.1.1.js" />
@@ -352,8 +283,10 @@
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="scripts\jquery.backstretch.js" />
     <Content Include="scripts\jquery.backstretch.min.js" />
+    <Content Include="scripts\jquery.sequence-min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\placeholder.js" />
+    <Content Include="scripts\script.min.js" />
     <Content Include="scripts\scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -366,8 +299,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChiTietDatDongHo.cs" />
     <Compile Include="Models\ChiTietDatHang.cs" />
     <Compile Include="Models\ChiTietDonDatHang.cs" />
+    <Compile Include="Models\CTSP.cs" />
     <Compile Include="Models\DONGHO.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -375,7 +310,9 @@
     </Compile>
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\OnePayProperty.cs" />
     <Compile Include="Models\SanPhamNu.cs" />
+    <Compile Include="Models\VPCRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -386,43 +323,44 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Views\Home\LinkSanPham.cshtml" />
-    <Content Include="Views\Shared\_LayoutDanhMuc.cshtml" />
     <Content Include="Views\Home\SanPham.cshtml" />
     <Content Include="Views\Home\SanPhamNu.cshtml" />
     <Content Include="Views\Home\SanPhamNam.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
-    <Content Include="Views\Home\QuanLy.cshtml" />
-    <Content Include="Views\Shared\_LayoutQuanLy.cshtml" />
     <Content Include="Views\QuanLy\Index.cshtml" />
-    <Content Include="Views\QuanLy\QLSANPHAM.cshtml" />
     <Content Include="Views\QuanLy\SuaSanPham.cshtml" />
     <Content Include="Views\QuanLy\Create.cshtml" />
     <Content Include="Views\QuanLy\XOA.cshtml" />
-    <Content Include="Views\Home\Admin.cshtml" />
     <Content Include="Views\Home\donghotot.cshtml" />
     <Content Include="Views\Home\donghonew.cshtml" />
-    <Content Include="Views\Home\KhachHang.cshtml" />
     <Content Include="Views\KhachHang\DangKy.cshtml" />
     <Content Include="Views\GioHang\GioHang.cshtml" />
     <Content Include="Views\GioHang\GiohangPartial.cshtml" />
     <Content Include="Views\GioHang\DatHang.cshtml" />
     <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
-    <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="scripts\jquery-3.1.1.min.map" />
     <Content Include="scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Views\Home\asdasd.cshtml" />
-    <Content Include="Views\Home\vuivui.cshtml" />
     <Content Include="Views\Home\vuivuiu.cshtml" />
     <Content Include="Views\QuanLy\DetailsDDH.cshtml" />
     <Content Include="Views\QuanLy\DetailsDDongho.cshtml" />
     <Content Include="Views\QuanLy\DonDatHang.cshtml" />
     <Content Include="Views\QuanLy\updateĐH.cshtml" />
-    <Content Include="Views\QuanLy\DatHang.cshtml" />
+    <Content Include="Views\Shared\_LayoutDanhMuc.cshtml" />
+    <Content Include="Views\Home\TimKiem.cshtml" />
+    <Content Include="Views\Shared\_LayoutQuanLy.cshtml" />
+    <Content Include="Views\QuanLy\QLSANPHAM.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\KhachHang.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\QuangCao.cshtml" />
+    <Content Include="Views\Home\donghotot2.cshtml" />
+    <Content Include="Views\QuanLy\TimKiem1.cshtml" />
+    <Content Include="Views\Home\TenKH.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -432,6 +370,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="demo\" />
+    <Folder Include="themes\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

@@ -488,7 +488,7 @@ a:focus {
 .user-panel > .info {
   padding: 5px 5px 5px 15px;
   line-height: 1;
-  position: absolute;
+  /*position: absolute;*/
   left: 55px;
 }
 .user-panel > .info > p {

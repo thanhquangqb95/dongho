@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Đồng Hồ Hot";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<div class="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a class="fa fa-home"> @Html.ActionLink(" Trang Chủ", "Index") </a>
+            </li>
+            <li>
+                <a>@Html.ActionLink("Đồng Hồ Tốt", "donghotot2")</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="show">
+    <div class="container">
+        <div class="text-link">
+            <a>@Html.ActionLink("Đồng Hồ Hot", "donghotot2")</a>
+        </div>
+        <div class="row" style="text-align:center">
+            @foreach (var dongho in Model)
+            {
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="img-show">
+
+                        <div class="thumbnail">
+                            <a href="@Url.Action("Details","Home",new { id = dongho.MaDongHo})">
+                                <img src="~/DongHo/@dongho.hinh" alt="@dongho.TenDongHo" style="width:100%" />
+                                <p><h5 style="color:#0005ed">@dongho.TenDongHo</h5></p>
+                            </a>
+                            <p style="color:#a37e2c">Giá: @dongho.DonGia <i class="fa fa-usd"></i></p>
+                            <div id="DatMua" class="fc-button">
+                                <a href="@Url.Action("ThemGiohang", "GioHang",new {@iMasach = dongho.MaDongHo,@strURL= Request.Url.ToString()})" class="list-group-item" style="text-align:center;background-color:#006039"><h5 style="color:#a37e2c;height:10px;text-align:center">Đặt Mua</h5></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>
+

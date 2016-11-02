@@ -5,7 +5,7 @@
 }
 <!DOCTYPE html>
 <html>
-<head>
+@*<head>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -81,13 +81,15 @@
             }
     </style>
 
-</head>
+</head>*@
 
 <body>
+    <link href="~/Content/home/Danhmuc.css" rel="stylesheet" />
+    <link href="~/Content/home/style.css" rel="stylesheet" />
     <div class="container">
-        <h2 style="color:#efe1e1">CHI TIẾT THÔNG TIN ĐẶT HÀNG</h2>
+        <h2 style="color:#4e6cb6">CHI TIẾT THÔNG TIN ĐẶT HÀNG</h2>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="tab" role="tabpanel">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
@@ -101,30 +103,38 @@
                                 <tbody>
                                     <tr><td width="150" class="title">Họ tên</td><td>@Model.Tenkh</td></tr>
                                     <tr><td width="150" class="title">Số Điện Thoại</td><td>@Model.SDT1</td></tr>
-                                    
+                                    <tr><td width="150" class="title">Địa Chỉ</td><td>@Model.DiaChi1</td></tr>
                                 </tbody>
                             </table>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="ctDatHang">
-                            <table class="table">
-                                <tr>
-                                    <th>
-                                        Hình Ảnh Sản Phẩm
-                                    </th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Giá </th>
-                                </tr>
-                                 @foreach (var item in Model.dongho)
-                                {
-                                    <tr>
-                                        <th><img class="hinhsanpham" src="~/DONGHO/@item.hinh" /></th>
-                                        <th>@item.TenDongHo</th>
-                                        <th>@item.DonGia</th>
-                                        <th>
+                            <div class="table">
+                                <table class="listing" cellpadding="0" cellspacing="0">
+                                    <tr style="text-align:center; font-weight:bold">
+
+                                        <td>
+                                            Hình Ảnh Sản Phẩm
+                                        </td>
+                                        <td>Tên Sản Phẩm</td>
+                                        <td>Giá </td>
+                                        <td>Số Lượng </td>
+                                        <td>Tổng Giá </td>
                                     </tr>
-                                }
-                            </table>
+                                    @foreach (var item in Model.Dsdongho1)
+                                    {
+                                        <tr style="text-align:center">
+                                            <th><img class="hinhsanpham" src="~/DONGHO/@item.Hinhsq" /></th>
+                                            <th>@item.Tensp</th>
+                                            <th>@item.Giasq</th>
+                                            <th>@item.Soluongsp</th>
+                                            <th>@item.Tonggiasp</th>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
                         </div>
+                        
+
                     </div>
                 </div>
             </div>
@@ -142,5 +152,129 @@
         margin-left:30%;
     }
 </style>
+<style>
+    .bt {
+        padding-top: 15px;
+        margin: auto;
+    }
+
+    div.table {
+        float: left;
+        position: relative;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    table.listing {
+        border-bottom: 1px solid #222d32;
+        width: 100%;
+        padding: 0;
+        margin: auto;
+        border: 1px solid #222d32;
+    }
+
+        table.listing th {
+            border-top: 0 !important;
+            margin: auto;
+        }
+
+            table.listing th.full {
+                border-left: 0;
+                border-right: 0 !important;
+                text-align: left;
+            }
+
+    div.table img.left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    div.table img.right {
+        position: absolute;
+        top: 0;
+        right: 1px;
+    }
+    /* table styles */
+    table.listing td,
+    table.listing th {
+        margin: auto;
+        border: 1px solid #201b3c;
+        text-align: center;
+    }
+
+    table.listing th {
+        margin: auto;
+        background: #fff;
+        color: #000;
+        padding: 5px;
+    }
+
+    table.listing td {
+        background: #222d32;
+        color: #fff;
+        padding: 3px 5px;
+    }
+
+    table.listing .bg td {
+        background: #ff00dc;
+    }
+
+    table.listing .white td {
+        background: #000;
+    }
+
+    table.listing .first {
+        border-left: 0px solid #ff00dc;
+        text-align: left;
+    }
+
+    table.listing .last {
+        border-right: 0px solid #ff00dc;
+    }
+
+    table.listing th.first {
+        background: #ff00dc url(../img/bg-th-left.gif) no-repeat left top;
+        border-left: 0;
+    }
+
+    table.listing th.last {
+        background: #ff00dc url(../img/bg-th-right.gif) no-repeat right top;
+        border-right: 0;
+    }
+
+    table.listing .style1 {
+        font-weight: bold;
+        color: #FF7A00;
+    }
+
+    table.listing .style2 {
+        font-weight: bold;
+        padding-left: 16px;
+    }
+
+    table.listing .style3 {
+        padding-left: 25px;
+    }
+
+    table.listing .style4 {
+        padding-left: 35px;
+    }
+
+    table.form .last {
+        padding: 1px 0 1px 5px;
+        text-align: left;
+    }
+
+    table.form th,
+    table.form td {
+        padding-left: 10px;
+    }
+
+    table.form input.text {
+        width: 262px;
+    }
+</style>
+
 
 

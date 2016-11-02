@@ -18,19 +18,41 @@ namespace DongHo.Controllers
         KhachHang khachhang;
         public ActionResult Index()
         {
-            return View();
+            if (Session["Taikhoanadmin"]!=null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Admin","Home");
+            }
         }
         public ActionResult QLSANPHAM(int? page)
         {
-            int pageSize = 5;
-            int pageNumber = (page ?? 1);
-            return View(data.DONGHOs.ToList().OrderByDescending(m=>m.MaDongHo).ToPagedList(pageNumber,pageSize));
+            if (Session["Taikhoanadmin"] != null)
+            {
+                int pageSize = 5;
+                int pageNumber = (page ?? 1);
+                return View(data.DONGHOs.ToList().OrderByDescending(m => m.MaDongHo).ToPagedList(pageNumber, pageSize));
+            }
+            else
+            {
+                return RedirectToAction("Admin", "Home");
+            }
         }
         public ActionResult Create()
         {
-            ViewBag.MaNCC = new SelectList(data.NHACUNGCAPs.ToList().OrderBy(n => n.TenNSX), "MaNCC", "TenNSX");
-            ViewBag.MaLoai = new SelectList(data.LOAISPs.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
-            return View();
+            if (Session["Taikhoanadmin"] != null)
+            {
+                ViewBag.MaNCC = new SelectList(data.NHACUNGCAPs.ToList().OrderBy(n => n.TenNSX), "MaNCC", "TenNSX");
+                ViewBag.MaLoai = new SelectList(data.LOAISPs.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Admin", "Home");
+            }
+           
         }
         [HttpPost]
         [ValidateInput(false)]
@@ -73,51 +95,79 @@ namespace DongHo.Controllers
         [HttpGet]
         public ActionResult SuaSanPham(int id)
         {
-            //Lay ra doi tuong sach theo ma
-            DONGHO dongho = data.DONGHOs.SingleOrDefault(n => n.MaDongHo == id);
-            ViewBag.MaDongHo = dongho.MaDongHo;
-            if (dongho == null)
+            if (Session["Taikhoanadmin"] != null)
             {
-                Response.StatusCode = 404;
-                return null;
+                DONGHO dongho = data.DONGHOs.SingleOrDefault(n => n.MaDongHo == id);
+                ViewBag.MaDongHo = dongho.MaDongHo;
+                if (dongho == null)
+                {
+                    Response.StatusCode = 404;
+                    return null;
+                }
+                //Dua du lieu vao dropdownList
+                //Lay ds tu tabke chu de, sắp xep tang dan trheo ten chu de, chon lay gia tri Ma CD, hien thi thi Tenchude
+                ViewBag.MaNCC = new SelectList(data.NHACUNGCAPs.ToList().OrderBy(n => n.TenNSX), "MaNCC", "TenNSX");
+                ViewBag.MaLoai = new SelectList(data.LOAISPs.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+                return View(dongho);
             }
-            //Dua du lieu vao dropdownList
-            //Lay ds tu tabke chu de, sắp xep tang dan trheo ten chu de, chon lay gia tri Ma CD, hien thi thi Tenchude
-            ViewBag.MaNCC = new SelectList(data.NHACUNGCAPs.ToList().OrderBy(n => n.TenNSX), "MaNCC", "TenNSX");
-            ViewBag.MaLoai = new SelectList(data.LOAISPs.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
-            return View(dongho);
+            else
+            {
+                return RedirectToAction("Admin", "Home");
+            }
+            //Lay ra doi tuong sach theo ma
+            
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult SuaSanPham(DONGHO dongho, HttpPostedFileBase fileUpload)
+        public ActionResult SuaSanPham(int id ,HttpPostedFileBase fileUpload , FormCollection collection)
         {
+            
             //Dua du lieu vao dropdownload
             ViewBag.MaNCC = new SelectList(data.NHACUNGCAPs.ToList().OrderBy(n => n.TenNSX), "MaNCC", "TenNSX");
             ViewBag.MaLoai = new SelectList(data.LOAISPs.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
             //Kiem tra duong dan file
-            if (fileUpload == null)
+            var dongho = data.DONGHOs.First(m => m.MaDongHo == id);
+            if (dongho == null)
             {
                 ViewBag.Thongbao = "Vui lòng chọn ảnh bìa";
-                return View();
+                return View(dongho);
             }
             //Them vao CSDL
             else
             {
                 if (ModelState.IsValid)
                 {
-                    //Luu ten fie, luu y bo sung thu vien using System.IO;
-                    var fileName = Path.GetFileName(fileUpload.FileName);
-                    //Luu duong dan cua file
-                    var path = Path.Combine(Server.MapPath("~/DONGHO"), fileName);
-                    //Kiem tra hình anh ton tai chua?
-                    if (System.IO.File.Exists(path))
-                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
-                    else
+                    try
                     {
-                        //Luu hinh anh vao duong dan
-                        fileUpload.SaveAs(path);
+                        //Luu ten fie, luu y bo sung thu vien using System.IO;
+                        var fileName = Path.GetFileName(fileUpload.FileName);
+                        //Luu duong dan cua file
+                        var path = Path.Combine(Server.MapPath("~/DONGHO"), fileName);
+                        //Kiem tra hình anh ton tai chua?
+                        if (System.IO.File.Exists(path))
+                            ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                        else
+                        {
+                            //Luu hinh anh vao duong dan
+                            fileUpload.SaveAs(path);
+                        }
+
+                            dongho.hinh = fileName;
+                            dongho.TenDongHo = collection["TenDongHo"];
+                            dongho.MaLoai = int.Parse(collection["MaLoai"]);
+                            dongho.MaNCC = int.Parse(collection["MaNCC"]);
+                            dongho.SoLuong = int.Parse(collection["SoLuong"]);
+                            dongho.DonGia = int.Parse(collection["DonGia"]);
                     }
-                    dongho.hinh = fileName;
+                    catch
+                    {
+                        dongho.hinh = dongho.hinh;
+                        dongho.TenDongHo = collection["TenDongHo"];
+                        dongho.MaLoai = int.Parse(collection["MaLoai"]);
+                        dongho.MaNCC = int.Parse(collection["MaNCC"]);
+                        dongho.SoLuong = int.Parse(collection["SoLuong"]);
+                        dongho.DonGia = int.Parse(collection["DonGia"]);
+                    }
                     //Luu vao CSDL   
                     UpdateModel(dongho);
                     data.SubmitChanges();
@@ -142,34 +192,49 @@ namespace DongHo.Controllers
         [HttpPost, ActionName("XOA")]
         public ActionResult Xacnhanxoa(int id)
         {
-            //Lay ra doi tuong sach can xoa theo ma
-            DONGHO dongho = data.DONGHOs.SingleOrDefault(n => n.MaDongHo == id);
-            ViewBag.MaDongHo = dongho.MaDongHo;
-            if (dongho == null)
+            try
             {
-                Response.StatusCode = 404;
-                return null;
+                var chitietddh = from ddh in data.CTDDHs where ddh.MaDongHo == id select ddh;
+                foreach(CTDDH ct in chitietddh)
+                {
+                    data.CTDDHs.DeleteOnSubmit(ct);
+                }
+                //Lay ra doi tuong sach can xoa theo ma
+                DONGHO dongho = data.DONGHOs.SingleOrDefault(n => n.MaDongHo == id);
+                ViewBag.MaDongHo = dongho.MaDongHo;
+                if (dongho == null)
+                {
+                    Response.StatusCode = 404;
+                    return null;
+                }
+                data.DONGHOs.DeleteOnSubmit(dongho);
+                data.SubmitChanges();
+                return RedirectToAction("Index");
             }
-            data.DONGHOs.DeleteOnSubmit(dongho);
-            data.SubmitChanges();
-            return RedirectToAction("Index");
+            catch
+            {
+                return RedirectToAction("Index");
+            }
         }
         public ActionResult DonDatHang()
         {
-            var groupJoinQuery =
-          from ddh in data.DONDATHANGs where ddh.ThanhToan == false
-          select ddh;
-          return View(groupJoinQuery);
-        }
-        public ActionResult DatHang()
-        {
-            var groupJoinQuery =
-          from ddh in data.DONDATHANGs
-          where ddh.ThanhToan == false
-          select ddh;
-            return View(groupJoinQuery);
-        }
+      
 
+            if (Session["Taikhoanadmin"] != null)
+            {
+                var groupJoinQuery =
+                from ddh in data.DONDATHANGs
+                where ddh.ThanhToan == false
+                 select ddh;
+                Session["SODDH"] = groupJoinQuery.Count();
+                return View(groupJoinQuery);
+            }
+            else
+            {
+                return RedirectToAction("Admin", "Home");
+            }
+        }
+       
         public ActionResult DetailsDDH(int id)
         {
             khachhang = new KhachHang(id);
@@ -187,7 +252,7 @@ namespace DongHo.Controllers
         }
         public ActionResult updateĐH(int id)
         {
-           
+
             if (Session["MaDDH"] != null)
             {
                 id = int.Parse(Session["MaDDH"].ToString());
@@ -200,16 +265,39 @@ namespace DongHo.Controllers
                     ord.GiaHang = true;
                     ord.ThanhToan = true;
                 }
-                try
+                data.SubmitChanges();
+                khachhang = new KhachHang(id);
+                for (int i = 0; i < khachhang.Sluong1.Count; i++)
                 {
-                    data.SubmitChanges();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
+                    if (khachhang.MaDdong[i] != 0)
+                    {
+                        DONGHO dh = data.DONGHOs.Single(m => m.MaDongHo == khachhang.MaDdong[i]);
+                        dh.SoLuong = (khachhang.Sluong1[i] - khachhang.SluongHang1[i]);
+                        data.SubmitChanges();
+                    }
                 }
             }
+            
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult TimKiem1(FormCollection collection, int? page)
+        {
+            int pageSize = 16;
+            int pageNumber = (page ?? 1);
+            var tendn = collection["TimKiem"];
+            ViewBag.tensp = tendn;
+            List<DONGHO> dh = data.DONGHOs.Where(m => m.TenDongHo.Contains(tendn)).ToList();
+            return View(dh.OrderBy(n => n.TenDongHo).ToPagedList(pageNumber, pageSize));
+        }
+        [HttpGet]
+        public ActionResult TimKiem1( int? page,string tensp)
+        {
+            int pageSize = 16;
+            int pageNumber = (page ?? 1);
+            ViewBag.tensp = tensp;
+            List<DONGHO> dh = data.DONGHOs.Where(m => m.TenDongHo.Contains(tensp)).ToList();
+            return View(dh.OrderBy(n => n.TenDongHo).ToPagedList(pageNumber, pageSize));
         }
     }
 }
